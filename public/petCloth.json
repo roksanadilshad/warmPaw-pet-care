@@ -44,7 +44,7 @@
     "rating": 4.9,
     "slotsAvailable": 5,
     "description": "Personalized diet planning to boost immunity and maintain energy in cold weather.",
-    "image": "https://i.postimg.cc/example4.png",
+    "image": "https://images.unsplash.com/photo-1592868209819-c853541f0acf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764",
     "category": "Health"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.6,
     "slotsAvailable": 2,
     "description": "Gentle grooming and trimming service to prevent fur matting during the winter season.",
-    "image": "https://i.postimg.cc/example5.png",
+    "image": "https://images.unsplash.com/photo-1625321150203-cea4bee44b54?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
     "category": "Grooming"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.9,
     "slotsAvailable": 3,
     "description": "Custom heated kennel design for both dogs and cats to ensure warmth and safety in cold months.",
-    "image": "https://i.postimg.cc/example6.png",
+    "image": "https://images.unsplash.com/photo-1697041120273-dadd0466a696?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=670",
     "category": "Housing"
   }
 ]

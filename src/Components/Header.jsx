@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, Navigate, NavLink } from 'react-router';
+import { AuthContext } from '../Context/AuthContext';
 
 const Header = () => {
+    const {user, signOutUser} = use(AuthContext);
+    console.log(user);
+    
+    const handleSignout = () =>{
+        signOutUser()
+        .then()
+        .catch()
+    }
     const links = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/service'>Service</NavLink></li>
     <li><NavLink to='/profile'>My Profile</NavLink></li>
-    <li> <NavLink to='/register'>Register</NavLink></li>
-    <li><NavLink to='/login'>Login</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="px-20 mx-auto navbar bg-[#26325222] shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +29,7 @@ const Header = () => {
        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+   <img src="https://templates.sparklethings.com/opet/wp-content/uploads/sites/133/2025/10/logo-opet.png" alt=""  className='w-16 h-12'/>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -30,7 +37,17 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    {
+        user ? 
+        (<>
+        <a className=""><img src={user.photoURL} className='w-12 h-12 rounded-full' alt={user.displayName} /></a>
+        <button onClick={handleSignout} className='btn btn-secondary ml-2'>Log Out</button>
+        </>) : (<>
+         <NavLink className='btn mr-1 btn-success' to='/register'>Register</NavLink>
+       <NavLink className='btn mr-1 btn-warning' to='/login'>Login</NavLink>
+        </>)
+
+    }
   </div>
 </div>
     );

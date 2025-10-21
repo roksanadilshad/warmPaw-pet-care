@@ -18,7 +18,8 @@ export const router = createBrowserRouter([
         {
           path:'/register',
           Component: Registration
-        },{
+        },
+        {
           path:'/login' ,
           Component: Login
         }

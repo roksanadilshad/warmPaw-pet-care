@@ -27,10 +27,10 @@ const Registration = () => {
 
         createUser(email, password)
         .then(result =>{
-            console.log(result.user);
+            //console.log(result.user);
              updateCurrentUser({ displayName: name, photoURL: photo })
           .then(() => {
-            setUser({ ...user, displayName: name, photoURL: photo });
+            setUser({...result.user, displayName: name, photoURL: photo });
             Navigate("/");
           })
          .catch((error) => {

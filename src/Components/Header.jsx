@@ -29,7 +29,7 @@ const Header = () => {
        {links}
       </ul>
     </div>
-   <img src="https://templates.sparklethings.com/opet/wp-content/uploads/sites/133/2025/10/logo-opet.png" alt=""  className='w-16 h-12'/>
+   <img src="https://templates.sparklethings.com/opet/wp-content/uploads/sites/133/2025/10/logo-opet.png" alt=""  className='w-20 h-12'/>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -40,7 +40,7 @@ const Header = () => {
     {
         user ? 
         (<>
-        <a className=""><img src={user.photoURL} className='w-12 h-12 rounded-full' alt={user.displayName} /></a>
+        <a className=""><img src={user.photoURL} className='w-12 h-12 rounded-full' title={user.displayName} /></a>
         <button onClick={handleSignout} className='btn btn-secondary ml-2'>Log Out</button>
         </>) : (<>
          <NavLink className='btn mr-1 btn-success' to='/register'>Register</NavLink>

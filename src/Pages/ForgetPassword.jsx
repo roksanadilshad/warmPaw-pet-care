@@ -1,24 +1,36 @@
-import React, { use, useRef, useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 const ForgetPassword = () => {
    const {passwordReset} = use(AuthContext);
    const [email,setEmail] = useState("");
    const emailRef = useRef();
+   const location = useLocation();
+
+    useEffect(() => {
+    if (location.state?.email) {
+      setEmail(location.state.email);
+    }
+  }, [location.state]);
 
     const handleReset = (e) =>{
         e.preventDefault();
     const email = emailRef.current.value;
+
     if(!email) {
       toast.error('Please Enter Your Email First');
       return
     }
          passwordReset(email)
          .then(() => {
-      toast.success('Password reset email sent! Check your inbox 📩')
+      toast.success('Password reset email sent! Check your inbox 📩');
+      setTimeout(() => {
+          window.location.href = "https://mail.google.com";
+        }, 2000);
      })
+     
      .catch((err) =>{
          toast.error(err.message);
          

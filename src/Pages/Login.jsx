@@ -14,6 +14,7 @@ const Login = () => {
     
      const [err, setErr] = useState(null);
      const [showPass, setShowPass] = useState(false);
+     const [email, setEmail] = useState('')
      
 
     //default direct after login
@@ -23,7 +24,7 @@ const Login = () => {
     e.preventDefault();
       const email = e.target.email.value;
       const password = e.target.password.value;
-     
+     setEmail(email)
       //console.log(email, password);
       setErr(null)
       signInUser(email, password)
@@ -56,6 +57,10 @@ const Login = () => {
       setShowPass(!showPass)
     }
 
+    const handleForgetPassword = () =>{
+      navigate('/forgetPassword', {state: { email }})
+    }
+
    
     return (
        <div className="  min-h-screen">
@@ -78,7 +83,7 @@ const Login = () => {
                     <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />
                     <button type="button" onClick={handlePasswordShow} className='text-2xl top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <LuEyeClosed></LuEyeClosed>}</button>
                     </div>
-          <Link to='/forgetPassword'><a className="link link-hover">Forgot password?</a></Link>
+          <button onClick={handleForgetPassword}><a className="button link-hover text-left">Forgot password?</a></button>
 
           {
             err && <p className="text-red-700">Please provide a valid Email or Password !</p>

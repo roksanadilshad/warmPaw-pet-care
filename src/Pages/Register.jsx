@@ -1,12 +1,18 @@
 import React, { use, useState } from 'react';
 
-import { Link, Navigate } from 'react-router';
+import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
-import { updateCurrentUser } from 'firebase/auth';
+import {  updateProfile } from 'firebase/auth';
+import { FaEye } from 'react-icons/fa';
+import { LuEyeClosed } from 'react-icons/lu';
 
 const Registration = () => {
      const {createUser, setUser} = use(AuthContext);
      const [nameError, setNameError] = useState('');
+     const [success, setSuccess] = useState(false);
+     const [error, setError] = useState('');
+  const [showPass, setShoePass] = useState(false)
+const navigate = useNavigate();
   
 
     const handleSubmit = (e) =>{
@@ -15,7 +21,15 @@ const Registration = () => {
         const password = e.target.password.value;
         const name = e.target.name.value;
         const photo = e.target.photo.value;
+        const terms = e.target.terms.checked
         //console.log(email, password);
+
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?`~\-]).{6,}$/;
+
+         if(!passwordPattern.test(password)){
+          setError('Passowerd must be contain at least 6 characters long, include one uppercase, one lowercase and special character')
+          return
+         }
 
         if(name.length < 5){
             setNameError('Name Should be more then 5 character');
@@ -24,31 +38,48 @@ const Registration = () => {
         else{
             setNameError('')
         };
+        
+        setError(null);
+         setSuccess(false);
 
-        createUser(email, password)
+         if(!terms){
+          setError('Please accept our terms and condition.');
+          return;
+         }
+
+        createUser(email, password, terms)
         .then(result =>{
-            console.log(result.user);
-             updateCurrentUser({ displayName: name, photoURL: photo })
-          .then(() => {
-            setUser({...result.user, displayName: name, photoURL: photo });
-            Navigate("/");
-          })
+          const user = result.user;
+          setSuccess(true)
+          e.target.reset()
+            //console.log(result.user);
+             return updateProfile(user, {
+          displayName: name,
+          photoURL: photo,
+        }).then(() => {
+          setUser({ ...user, displayName: name, photoURL: photo });
+          setSuccess(true);
+          setError('');
+          e.target.reset();
+          navigate('/');
+        });
+      })
          .catch((error) => {
             console.log(error);
-            setUser(result.user);
+            setError(error.message);
+            setSuccess(false)
           });
-            
-        })
-        .catch(error => {
-            console.log(error.message);
-            
-        });
+    }
+
+    const handlePasswordShow = e =>{
+      e.preventDefault();
+      setShoePass(!showPass)
     }
         
     
    
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero bg-gradient-to-r from-[#f1dcaa] to-[#FFB347] bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Registration now!</h1>
@@ -58,9 +89,9 @@ const Registration = () => {
       </p>
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
+      <div className="card-body bg-gradient-to-r from-[#f1dcaa] to-[#FFB347]">
         <form onSubmit={handleSubmit}>
-        <fieldset className="fieldset">
+        <fieldset className="fieldset ">
              <label className="label">Name</label>
             <input
               name="name"
@@ -85,11 +116,26 @@ const Registration = () => {
           <label className="label">Email</label>
           <input name='email' type="email" className="input" placeholder="Email" />
           <label className="label">Password</label>
-          <input name='password' type="password" className="input" placeholder="Password" />
-          <div><a className="link link-hover">Forgot password?</a></div>
-          <button type='submit' className="btn btn-neutral mt-4">Registration</button>
+         <div className='relative'>
+          <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />
+          <button onClick={handlePasswordShow} className='text-2xl top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <LuEyeClosed></LuEyeClosed>}</button>
+          </div>
+         <div>
+            <label className="label">
+         <input name='terms' type="checkbox" className="checkbox" />
+        Accept our terms and condition
+        </label>
+           </div>
 
-          <p>Already have an account ? Please <Link className='text-blue-400' to='/login'>Sign in</Link></p>
+          {
+            success && <p className='text-green-500'>Account Crteated Sussessfully</p>
+          }
+           {
+          error && <p className='text-red-500'>{error.message}! provide a valid email or passowerd</p>  
+        }
+          <button className="btn btn-success text-white mt-4">Registration</button>
+
+          <p>Already have an account ? Please <Link className='text-amber-700' to='/login'>Sign in</Link></p>
         </fieldset>
         </form>
       </div>

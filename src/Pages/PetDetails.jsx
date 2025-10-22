@@ -26,7 +26,7 @@ const PetDetails = () => {
                  rating,  serviceName, description, image, price } =  singlePet;
 
                  const handleOnSubmit = (e) =>{
-                    e.preventDefault;
+                    e.preventDefault();
                     alert('Submited')
                  }
 

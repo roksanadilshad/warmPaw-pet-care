@@ -7,7 +7,7 @@ const Service = () => {
     console.log(data);
     
     return (
-        <div className='grid grid-cols-1 gap-10 py-20'>
+        <div className='grid grid-cols-2 gap-10 py-20'>
             {
                 data.map(service => <ServiceCard service={service} key={service.serviceId}></ServiceCard>)
             }

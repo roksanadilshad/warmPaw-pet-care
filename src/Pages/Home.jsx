@@ -43,7 +43,7 @@ const Home = () => {
          title='Meet Our Expert Vets'
          description='introduces our team of skilled veterinarians who are dedicated to providing top-quality care for your pets. Learn about their expertise, experience, and compassionate approach to keeping your furry friends healthy and happy.'
          ></Title>
-      <div className='grid grid-cols-3 gap-10 w-11/12 mx-auto'>
+      <div className='grid grid-cols-2 w-11/12 mx-auto'>
         {
           vets.map(vetsCard => <VetsCards vetsCard={vetsCard} key={vetsCard.vetId}></VetsCards>)
         }

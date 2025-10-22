@@ -6,6 +6,8 @@ import Registration from '../Pages/Register';
 import Login from '../Pages/Login';
 import Service from '../Pages/Service/Service';
 import PetDetails from '../Pages/PetDetails';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import Profile from '../Pages/Profile';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
@@ -44,7 +46,12 @@ export const router = createBrowserRouter([
         },
         {
           path:'/service' ,
-          Component: Service
+          loader:() =>fetch('./pets.json'),
+          element: <PrivateRoute><Service></Service></PrivateRoute>
+        },
+        {
+          path:'/profile',
+          element: <PrivateRoute><Profile></Profile></PrivateRoute>
         },
         {
           path:'/petDetails/:id' ,

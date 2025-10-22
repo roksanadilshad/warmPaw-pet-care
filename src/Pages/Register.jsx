@@ -13,7 +13,7 @@ const Registration = () => {
      const [error, setError] = useState('');
   const [showPass, setShoePass] = useState(false)
 const navigate = useNavigate();
-  
+  const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -56,12 +56,13 @@ const navigate = useNavigate();
              return updateProfile(user, {
           displayName: name,
           photoURL: photo,
-        }).then(() => {
+        })
+        .then(() => {
           setUser({ ...user, displayName: name, photoURL: photo });
           setSuccess(true);
           setError('');
           e.target.reset();
-          navigate('/');
+           navigate(from, {replace:true});
         });
       })
          .catch((error) => {

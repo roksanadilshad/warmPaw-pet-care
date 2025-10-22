@@ -1,24 +1,20 @@
 import React from 'react';
-import { IoStar, IoStarOutline } from 'react-icons/io5';
+import PetsCards from '../PetsCards';
+import { IoStar } from 'react-icons/io5';
 import { Link } from 'react-router';
 
-const PetsCards = ({petCard = []}) => {
-    //const pets = useLoaderData();
-//    
-    //console.log(petCard);
+const ServiceCard = ({service = []}) => {
     const {serviceName
 ,image, price, rating, 
 serviceId
-} = petCard
-    
+} =service
     return (
         <div>
-
-            <div className="bg-amber-50 card shadow-lg rounded-2xl hover:scale-105 transition-all">
+            <div className="max-w-4xl mx-auto p-6 card shadow-lg rounded-2xl">
   <figure><img src={image} className='rounded-xl w-full h-96 object-cover' alt="Dog Coat" /></figure>
   <div className="card-body">
     <h2 className="text-xl font-semibold">{serviceName}</h2>
-    <table>
+    <table className='w-28'>
         <tbody>
         <tr>
             <td className='font-semibold text-neutral'>Price:</td>
@@ -36,9 +32,8 @@ serviceId
     </div>
   </div>
 </div>
-
         </div>
     );
 };
 
-export default PetsCards;
+export default ServiceCard;

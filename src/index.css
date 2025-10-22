@@ -6,6 +6,12 @@
   default: true;
   --color-primary: blue;
   --color-secondary: teal;
+  --color-acent: #F4F1DE;
+  --color-neturl: #2E2E2E;
+  --color-info: #98C1D9;
+  --color-cards: #FBC4AB;
+
+
 }
 
 .active{

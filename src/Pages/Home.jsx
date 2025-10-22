@@ -45,7 +45,7 @@ const Home = () => {
          ></Title>
       <div className='grid grid-cols-3 gap-10 w-11/12 mx-auto'>
         {
-          vets.map(vetsCard => <VetsCards vetsCard={vetsCard} key={vetsCard.tipId}></VetsCards>)
+          vets.map(vetsCard => <VetsCards vetsCard={vetsCard} key={vetsCard.vetId}></VetsCards>)
         }
       </div>
         </section>      

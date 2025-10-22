@@ -1,12 +1,15 @@
 import React from 'react';
 import { IoStar, IoStarOutline } from 'react-icons/io5';
+import { Link } from 'react-router';
 
 const PetsCards = ({petCard = []}) => {
     //const pets = useLoaderData();
 //    
     //console.log(petCard);
     const {serviceName
-,image, price, rating,} = petCard
+,image, price, rating, 
+serviceId
+} = petCard
     
     return (
         <div>
@@ -28,7 +31,8 @@ const PetsCards = ({petCard = []}) => {
         </tbody>
     </table>
     <div className="card-actions justify-end">
-      <button className="btn btn-warning w-full">View Details</button>
+        <Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>
+     
     </div>
   </div>
 </div>

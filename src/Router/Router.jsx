@@ -5,6 +5,7 @@ import Home from '../Pages/Home';
 import Registration from '../Pages/Register';
 import Login from '../Pages/Login';
 import Service from '../Pages/Service/Service';
+import PetDetails from '../Pages/PetDetails';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
@@ -44,6 +45,11 @@ export const router = createBrowserRouter([
         {
           path:'/service' ,
           Component: Service
+        },
+        {
+          path:'/petDetails/:id' ,
+          loader: () =>fetch('/pets.json'),
+          Component: PetDetails,
         },
        
     ]

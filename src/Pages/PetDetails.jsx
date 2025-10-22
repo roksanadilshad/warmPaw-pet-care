@@ -23,13 +23,18 @@ const PetDetails = () => {
                  providerEmail,
                  providerName
                  , slotsAvailable,
-                 rating,  serviceName, description, image, price } =                  singlePet;
+                 rating,  serviceName, description, image, price } =  singlePet;
+
+                 const handleOnSubmit = (e) =>{
+                    e.preventDefault;
+                    alert('Submited')
+                 }
 
   return (
     <div className="max-w-xl mx-auto p-6">
       <h2 className="text-3xl font-bold mb-4">{serviceName}</h2>
       <img src={image} alt={serviceName} className="rounded-lg mb-4" />
-      <p>{description}</p>
+      <p className="text-[16px] pb-2">{description}</p>
      
       <p><strong>ProviderName:</strong> {providerName}</p>
       <p><strong>ProviderEmail:</strong> <span className="text-info">{providerEmail}</span></p>
@@ -43,15 +48,14 @@ const PetDetails = () => {
        <p><strong>Category:</strong> {category}</p>
       <p><strong>SlotsAvailable:</strong> {slotsAvailable}</p>
       </div>
-      <form>
+      <form onSubmit={handleOnSubmit}>
 
-       <fieldset className="fieldset">
+       <fieldset className="fieldset border-[1px] p-5 m-5 border-amber-600 rounded-xl">
+          <label className="label">Name</label>
+          <input type="text" name="name" className="input" placeholder="Your Name" />
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
-          <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" />
-          <div><a className="link link-hover">Forgot password?</a></div>
-          <button className="btn btn-neutral mt-4">Login</button>
+          <input type="email" name="email" className="input" placeholder="Youir Email" />
+          <button className="btn text-white mt-4 btn-success">Book Now</button>
         </fieldset>
       </form>
     </div>

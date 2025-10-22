@@ -1,0 +1,42 @@
+[
+  {
+    "vetId": 1,
+    "name": "Dr. Sarah Ahmed",
+    "specialization": "Small Animal Surgery",
+    "experience": "10 years",
+    "email": "sarah.ahmed@vetclinic.com",
+    "phone": "+880123456789",
+    "image": "https://plus.unsplash.com/premium_photo-1663045383496-d53a44276cfb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGNhdHNzJTIwZG9jdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+    "bio": "Dr. Sarah specializes in small animal surgeries and emergency care, ensuring pets get the best surgical treatment."
+  },
+  {
+    "vetId": 2,
+    "name": "Dr. Tanvir Hossain",
+    "specialization": "Veterinary Dermatology",
+    "experience": "8 years",
+    "email": "tanvir.hossain@vetclinic.com",
+    "phone": "+880987654321",
+    "image": "https://plus.unsplash.com/premium_photo-1663050603339-dffe70e6ba19?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+    "bio": "Dr. Tanvir has a keen interest in skin and coat health, helping pets overcome dermatological issues with care."
+  },
+  {
+    "vetId": 3,
+    "name": "Dr. Nabila Rahman",
+    "specialization": "Exotic Animals",
+    "experience": "6 years",
+    "email": "nabila.rahman@vetclinic.com",
+    "phone": "+8801122334455",
+    "image": "https://images.unsplash.com/photo-1721907043490-d51705da24fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2F0c3MlMjBkb2N0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+    "bio": "Dr. Nabila is an expert in exotic pets, including birds, reptiles, and small mammals, providing specialized treatment."
+  },
+  {
+    "vetId": 4,
+    "name": "Dr. Kamal Uddin",
+    "specialization": "Veterinary Nutrition",
+    "experience": "12 years",
+    "email": "kamal.uddin@vetclinic.com",
+    "phone": "+8809988776655",
+    "image": "https://images.unsplash.com/photo-1644675272883-0c4d582528d8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+    "bio": "Dr. Kamal focuses on pet nutrition and dietary management, ensuring pets lead healthy and balanced lives."
+  }
+]

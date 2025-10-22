@@ -4,6 +4,8 @@ import Root from '../Layouts/root';
 import Home from '../Pages/Home';
 import Registration from '../Pages/Register';
 import Login from '../Pages/Login';
+import Service from '../Pages/Service/Service';
+//import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +15,22 @@ export const router = createBrowserRouter([
     children: [
         {
             index: true,
-             loader:() => fetch('./pets.json'),
+              loader: async () => {
+    const [petsRes, tipsRes, vetsRes] = await Promise.all([
+      fetch('./pets.json'),
+      fetch('./tips.json'),
+      fetch('./vets.json')
+      
+    ]);
+
+    const [pets, tips, vets] = await Promise.all([
+      petsRes.json(),
+      tipsRes.json(),
+      vetsRes.json()
+    ]);
+
+    return { pets, tips,  vets};
+  },
             Component: Home,
         },
         {
@@ -24,11 +41,11 @@ export const router = createBrowserRouter([
           path:'/login' ,
           Component: Login
         },
-        // {
-        //   path:'/petsCard/:id',
-        //   Component: PetsCard,
-        //   loader:() => fetch('./pets.json')
-        // }
+        {
+          path:'/service' ,
+          Component: Service
+        },
+       
     ]
   },
 ]);

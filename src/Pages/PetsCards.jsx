@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoStar, IoStarOutline } from 'react-icons/io5';
 
-const PetsCard = ({petCard = []}) => {
+const PetsCards = ({petCard = []}) => {
     //const pets = useLoaderData();
 //    
     //console.log(petCard);
@@ -47,4 +47,4 @@ const PetsCard = ({petCard = []}) => {
     );
 };
 
-export default PetsCard;
+export default PetsCards;

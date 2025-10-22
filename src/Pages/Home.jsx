@@ -1,31 +1,54 @@
 import React from 'react';
 import HeroSlider from './HeroSlider';
 import { useLoaderData } from 'react-router';
-import PetsCard from './PetsCard';
+import TipsCards from './TipsCards';
+import Title from './Title';
+import PetsCards from './PetsCards';
+import VetsCards from './VetsCards';
 
 const Home = () => {
-  const pets = useLoaderData();
-  //console.log(pets);
+  const { pets, tips , vets} = useLoaderData();
+  //console.log(vets);
   
     return (
         <div className='relative w-full home'>
            <HeroSlider></HeroSlider>
     <section>
       <div>
-        <div className='w-full mx-auto py-20'>
-         <h2 className='text-4xl text-center font-bold pb-4'>Popular Winter Care Services</h2>
-         <p class="text-gray-700 text-center max-w-2xl mx-auto mb-8">
-  As the chilly season approaches, keeping yourself, your home, and your pets safe and comfortable is essential. 
-</p>
-        </div>
+        <Title 
+        title="Popular Winter Care Services"
+        description=' As the chilly season approaches, keeping yourself, your home, and your pets safe and comfortable is essential. '></Title>
+
         <div className='grid grid-cols-3 gap-10 w-11/12 mx-auto'>
           {
-            pets.map(petCard => <PetsCard key={petCard.serviceId
-} petCard={petCard}></PetsCard>)
+            pets.map(petCard => <PetsCards key={petCard.serviceId
+} petCard={petCard}></PetsCards>)
           }
         </div>
       </div>
-      </section>       
+      </section> 
+      <section>
+         <Title 
+         title='Winter Care Tips for Pets'
+         description='Winter Care Tips helps pet owners keep their furry friends healthy, warm, and comfortable during the cold season.'
+         ></Title>
+      <div className='grid grid-cols-3 gap-10 w-11/12 mx-auto'>
+        {
+          tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>)
+        }
+      </div>
+        </section>      
+      <section>
+         <Title 
+         title='Meet Our Expert Vets'
+         description='introduces our team of skilled veterinarians who are dedicated to providing top-quality care for your pets. Learn about their expertise, experience, and compassionate approach to keeping your furry friends healthy and happy.'
+         ></Title>
+      <div className='grid grid-cols-3 gap-10 w-11/12 mx-auto'>
+        {
+          vets.map(vetsCard => <VetsCards vetsCard={vetsCard} key={vetsCard.tipId}></VetsCards>)
+        }
+      </div>
+        </section>      
         </div>
        
     );

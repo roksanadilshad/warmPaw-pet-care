@@ -1,0 +1,32 @@
+[
+  {
+    "tipId": 1,
+    "title": "Keep Pets Warm Indoors",
+    "category": "Temperature Control",
+    "description": "Ensure your pets stay warm inside the house. Provide cozy blankets, soft bedding, and keep them away from cold floors or drafts.",
+    "recommendedFor": ["Dogs", "Cats"],
+    "difficultyLevel": "Easy",
+    "safetyNote": "Avoid using space heaters near pets to prevent burns or accidents.",
+    "image": "https://plus.unsplash.com/premium_photo-1661676191997-0c0cece2a683?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+  },
+  {
+    "tipId": 2,
+    "title": "Moisturize Dry Skin",
+    "category": "Skin & Coat Care",
+    "description": "Cold air can dry out a pet’s skin. Use vet-approved moisturizers or coconut oil to keep their coat shiny and skin healthy.",
+    "recommendedFor": ["Dogs", "Cats", "Rabbits"],
+    "difficultyLevel": "Medium",
+    "safetyNote": "Do not use human lotions, as they may contain ingredients toxic to pets.",
+    "image": "https://plus.unsplash.com/premium_photo-1663012822996-ba7e04f3627a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyZSUyMGRvZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500"
+  },
+  {
+    "tipId": 3,
+    "title": "Protect Paws from Ice and Salt",
+    "category": "Outdoor Protection",
+    "description": "Before walks, apply paw balm or use pet boots to protect paws from road salt and ice burns. Wipe their paws after returning home.",
+    "recommendedFor": ["Dogs"],
+    "difficultyLevel": "Medium",
+    "safetyNote": "Salt and antifreeze can be harmful if licked off, so always clean paws properly.",
+    "image": "https://images.unsplash.com/photo-1709304347994-0f7569aeeecd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735"
+  }
+]

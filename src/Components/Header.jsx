@@ -17,7 +17,7 @@ const Header = () => {
     <li><NavLink to='/profile'>My Profile</NavLink></li>
     </>
     return (
-        <div className="px-20 mx-auto navbar bg-gradient-to-r from-[#b5d9f5] to-[#c1f7f7] shadow-sm">
+        <div className=" bg-gradient-to-r from-[#FFF8E7] to-[#FFB347] px-20 mx-auto navbar shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

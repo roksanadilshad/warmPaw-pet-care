@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { data } from "react-router";
 
 const usePets = () =>{
     const [pets, setPets] = useState([]);

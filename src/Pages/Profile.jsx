@@ -1,11 +1,20 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import { Link } from 'react-router';
 import { RiEdit2Fill } from 'react-icons/ri';
+import Aos from 'aos';
+import toast from 'react-hot-toast';
 
 const Profile = () => {
     const {user, updateUserProfile} = use(AuthContext)
     const [isEditing, setIsEditing] = useState(false);
+    const [massege, setMassege] = useState('')
+     useEffect(() => {
+                Aos.init({
+                  duration: 1500,
+                  once: true,
+                });
+              }, []);
 
     //console.log(user);
 
@@ -15,16 +24,18 @@ const Profile = () => {
     const photoURL = e.target.photoURL.value;
     updateUserProfile(name, photoURL)
       .then(() => {
-        alert("✅ Profile updated successfully!");
+       setMassege("✅ Profile updated successfully!");
+        setIsEditing(false)
       })
       .catch(error => {
         console.error(error);
-        alert("❌ Failed to update profile.");
+        toast("❌ Failed to update profile.");
       });
   };
     
     return (
-<div className='h-screen'>
+<div data-aos='fade-up' className='h-screen'>
+  <div><title>WarmPaws Profile</title></div>
         <div className="max-w-3xl  mx-auto bg-gradient-to-r from-[#f1dcaa] to-[#FFB347] p-6 rounded-2xl shadow-lg mt-20">
              {user && (
         <div className="mt-6 text-center">
@@ -50,15 +61,17 @@ const Profile = () => {
           type="text"
           placeholder="Enter new name"
           name='name'
-          defaultValue={user.displayName || "Un Known"}
+          defaultValue={user.displayName || ""}
           className="input input-bordered"
+          required
         />
         <input
           type="text"
           placeholder="Enter new photo URL"
           name='photoURL'
+          required
           className="input input-bordered"
-           defaultValue={user.photoURL || "https://images.unsplash.com/photo-1747592771443-e15f155b1faf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=500"}
+           defaultValue={user.photoURL || ""}
         />
         <div className="flex gap-2">
       <button type="submit" className="btn btn-success flex-1">
@@ -72,6 +85,7 @@ const Profile = () => {
         Cancel
       </button>
     </div>
+     {massege && <p className="text-center mt-2">{massege}</p>}
         </form>
             )
         }

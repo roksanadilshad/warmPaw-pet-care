@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
 import { LuEyeClosed } from "react-icons/lu";
 import { FaEye } from "react-icons/fa";
+import toast, { ToastBar } from "react-hot-toast";
+
 
 const Login = () => {
     const {signInUser, signInWithGoogle,passwordReset} = use(AuthContext);
@@ -26,10 +28,10 @@ const Login = () => {
       .then(result =>{
         console.log(result);
         navigate(from, {replace:true})
-        
+        toast.success('Logged in successfully! 🎉');
       })
       .catch(err => {
-        console.log(err.message);
+        toast.error(err.message);
         setErr(err)
       })
       
@@ -39,10 +41,10 @@ const Login = () => {
          .then(result => {
             console.log(result.user);
             navigate(from, {replace:true})
-            
+            toast.success('Logged in successfully! 🎉');
          })
          .catch(err => {
-            console.log(err);
+            toast.error(err.message);
             
          })
     }
@@ -56,10 +58,10 @@ const Login = () => {
     const email = emailRef.current.value;
          passwordReset(email)
          .then(() => {
-      alert('Please Check Your Email')
+      toast.tailwindCSS('Please Check Your Email')
      })
      .catch((err) =>{
-         console.log(err);
+         toast.error(err);
          
      })
     }

@@ -8,13 +8,13 @@ import Service from '../Pages/Service/Service';
 import PetDetails from '../Pages/PetDetails';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import Profile from '../Pages/Profile';
+import ErrorPage from '../Pages/ErrorPage';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component:Root,
-    errorElement: <h2>Its an  error</h2>,
     children: [
         {
             index: true,
@@ -58,6 +58,10 @@ export const router = createBrowserRouter([
           loader: () =>fetch('/pets.json'),
           Component: PetDetails,
         },
+        {
+          path: '/*' ,
+          Component: ErrorPage
+        }
        
     ]
   },

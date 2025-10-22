@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PetsCards from '../PetsCards';
 import { IoStar } from 'react-icons/io5';
 import { Link } from 'react-router';
+import Aos from 'aos';
 
 const ServiceCard = ({service = []}) => {
+    useEffect(() => {
+            Aos.init({
+              duration: 1500,
+              once: true,
+            });
+          }, []);
     const {serviceName
 ,image, price, rating, 
 serviceId
 } =service
     return (
         <div>
-            <div className="max-w-4xl mx-auto p-6 card shadow-lg rounded-2xl">
+            <div data-aos='top-center' className="max-w-4xl mx-auto p-6 card shadow-lg rounded-2xl">
   <figure><img src={image} className='rounded-xl w-full h-96 object-cover' alt="Dog Coat" /></figure>
   <div className="card-body">
     <h2 className="text-xl font-semibold">{serviceName}</h2>

@@ -4,7 +4,7 @@ import { AuthContext } from '../Context/AuthContext';
 
 const Header = () => {
     const {user, signOutUser} = use(AuthContext);
-    console.log(user);
+    //console.log(user);
     
     const handleSignout = () =>{
         signOutUser()
@@ -17,7 +17,7 @@ const Header = () => {
     <li><NavLink to='/profile'>My Profile</NavLink></li>
     </>
     return (
-        <div className="px-20 mx-auto navbar bg-[#26325222] shadow-sm">
+        <div className="px-20 mx-auto navbar bg-gradient-to-r from-[#b5d9f5] to-[#c1f7f7] shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

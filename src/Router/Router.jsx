@@ -13,6 +13,7 @@ export const router = createBrowserRouter([
     children: [
         {
             index: true,
+             loader:() => fetch('./pets.json'),
             Component: Home,
         },
         {
@@ -22,7 +23,12 @@ export const router = createBrowserRouter([
         {
           path:'/login' ,
           Component: Login
-        }
+        },
+        // {
+        //   path:'/petsCard/:id',
+        //   Component: PetsCard,
+        //   loader:() => fetch('./pets.json')
+        // }
     ]
   },
 ]);

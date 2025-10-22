@@ -11,3 +11,6 @@
 .active{
     @apply border-b border-amber-400 text-amber-500 font-bold
 }
+.home{
+ @apply bg-gradient-to-r from-[#b5d9f5] to-[#c1f7f7] 
+}

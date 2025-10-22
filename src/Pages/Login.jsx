@@ -1,18 +1,20 @@
-import { use, useRef, useState } from "react";
+import { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
 import { LuEyeClosed } from "react-icons/lu";
 import { FaEye } from "react-icons/fa";
 import toast, { ToastBar } from "react-hot-toast";
+import ForgetPassword from "./ForgetPassword";
 
 
 const Login = () => {
-    const {signInUser, signInWithGoogle,passwordReset} = use(AuthContext);
+    const {signInUser, signInWithGoogle} = use(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-     const emailRef = useRef();
+    
      const [err, setErr] = useState(null);
      const [showPass, setShowPass] = useState(false);
+     
 
     //default direct after login
     const from = location.state?.from?.pathname || '/';
@@ -54,17 +56,7 @@ const Login = () => {
       setShowPass(!showPass)
     }
 
-   const handlePasswordReset = () =>{
-    const email = emailRef.current.value;
-         passwordReset(email)
-         .then(() => {
-      toast.tailwindCSS('Please Check Your Email')
-     })
-     .catch((err) =>{
-         toast.error(err);
-         
-     })
-    }
+   
     return (
        <div className="  min-h-screen">
   <div className="hero-content flex-col ">
@@ -80,13 +72,13 @@ const Login = () => {
 
         <fieldset className="fieldset">
           <label  className="label">Email</label>
-          <input ref={emailRef} name='email' type="email" className="input" placeholder="Email" />
+          <input  name='email' type="email" className="input" placeholder="Email" />
           <label className="label">Password</label>
           <div className='relative'>
                     <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />
                     <button type="button" onClick={handlePasswordShow} className='text-2xl top-2 text-center absolute z-10 right-5'>{showPass ? <FaEye></FaEye> : <LuEyeClosed></LuEyeClosed>}</button>
                     </div>
-          <div onClick={handlePasswordReset}><a className="link link-hover">Forgot password?</a></div>
+          <Link to='/forgetPassword'><a className="link link-hover">Forgot password?</a></Link>
 
           {
             err && <p className="text-red-700">Please provide a valid Email or Password !</p>

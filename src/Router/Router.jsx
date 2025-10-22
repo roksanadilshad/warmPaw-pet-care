@@ -9,6 +9,7 @@ import PetDetails from '../Pages/PetDetails';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import Profile from '../Pages/Profile';
 import ErrorPage from '../Pages/ErrorPage';
+import ForgetPassword from '../Pages/ForgetPassword';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
           path:'/petDetails/:id' ,
           loader: () =>fetch('/pets.json'),
           Component: PetDetails,
+        },
+        {
+          path: '/forgetPassword',
+          Component: ForgetPassword
         },
         {
           path: '/*' ,

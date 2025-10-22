@@ -49,16 +49,16 @@ const Home = () => {
         </section>      
      
         <section data-aos='zoom-in' className=' w-11/12 mx-auto lg:text-left mt-10'>
-          <div className='flex items-center lg:justify-between lg:flex-row flex-col-reverse'>
+          <div className=' flex items-center lg:justify-between lg:flex-row flex-col-reverse'>
             <div>
 
-            <div className=''>
-              <img className='rounded-2xl relative left-10 top-10' src="https://images.unsplash.com/photo-1627507109388-51995a21c3f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGV0JTIwbG92ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400" alt="" />
+            <div className='ml-20'>
+              <img className='rounded-2xl relative left-50 top-30 w-[400px]' src="https://images.unsplash.com/photo-1627507109388-51995a21c3f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGV0JTIwbG92ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400" alt="" />
 
-              <img className=' rounded-3xl' src="https://plus.unsplash.com/premium_photo-1664371674699-f9f70eab10b6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBldCUyMGxvdmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400" alt="" />
+              <img className=' w-[500px] rounded-3xl' src="https://plus.unsplash.com/premium_photo-1664371674699-f9f70eab10b6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBldCUyMGxvdmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400" alt="" />
             </div>
             </div>
-            <div className=' flex flex-col text-center lg:text-left items-center'>
+            <div className=' flex flex-col text-left items-center'>
               <h2 className='text-2xl font-medium py-2'>We love our job!</h2>
               <h2 className='text-6xl font-bold py-4'>We'll Make Your Pets Really Happy</h2>
               <p className='text-[#777] py-2'>Hundreds of pet owners trust us to take care

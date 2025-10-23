@@ -21,9 +21,9 @@ export const router = createBrowserRouter([
             index: true,
               loader: async () => {
     const [petsRes, tipsRes, vetsRes] = await Promise.all([
-      fetch('./pets.json'),
-      fetch('./tips.json'),
-      fetch('./vets.json')
+      fetch('/pets.json'),
+      fetch('/tips.json'),
+      fetch('/vets.json')
       
     ]);
 
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/service' ,
-          loader:() =>fetch('./pets.json'),
+          loader:() =>fetch('/pets.json'),
           element: <PrivateRoute><Service></Service></PrivateRoute>
         },
         {

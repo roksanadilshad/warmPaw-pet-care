@@ -57,24 +57,32 @@ const Profile = () => {
         {
             isEditing && (
                     <form onSubmit={handleUpdate} className="flex flex-col gap-4 items-center ">
+                      <div>
+
+                      <label htmlFor="">User Name</label>
             <input
           type="text"
           placeholder="Enter new name"
           name='name'
-          defaultValue={user.displayName || ""}
-          className="input input-bordered"
+          // defaultValue={user.displayName || ""}
+          className="input text-[#777] rounded-xl input-bordered"
           required
         />
+                      </div>
+                      <div>
+
+        <label htmlFor="">Photo URL</label>
         <input
-          type="text"
+          type='url'
           placeholder="Enter new photo URL"
           name='photoURL'
           required
-          className="input input-bordered"
-           defaultValue={user.photoURL || ""}
+          className="input text-[#777] rounded-xl input-bordered"
+          //  defaultValue={user.photoURL || ""}
         />
+                      </div>
         <div className="flex gap-2">
-      <button type="submit" className="btn text-white btn-success border-success flex-1">
+      <button type="submit" className="btn text-white btn-success border-success flex-1 ">
         Save
       </button>
       <button

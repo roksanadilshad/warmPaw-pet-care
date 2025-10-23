@@ -39,7 +39,10 @@ serviceId
         </tbody>
     </table>
     <div className="card-actions justify-end">
-        <Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>
+        {
+            loading ? (<Loder></Loder>) : (<Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>)
+        }
+        
      
     </div>
   </div>

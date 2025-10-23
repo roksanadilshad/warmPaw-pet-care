@@ -32,13 +32,17 @@ const Home = () => {
         <Title 
         title="Popular Winter Care Services"
         description=' As the chilly season approaches, keeping yourself, your home, and your pets safe and comfortable is essential. '></Title>
-
-        <div data-aos="fade-up-left" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
+         {
+          loading ? (<Loder></Loder>) : (
+ <div data-aos="fade-up-left" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
           {
             pets.map(petCard => <PetsCards key={petCard.serviceId
 } petCard={petCard}></PetsCards>)
           }
         </div>
+          )
+         }
+       
       </div>
       </section> 
       <section>
@@ -46,12 +50,17 @@ const Home = () => {
          title='Winter Care Tips for Pets'
          description='Winter Care Tips helps pet owners keep their furry friends healthy, warm, and comfortable during the cold season.'
          ></Title>
-      <div data-aos="fade-up-right" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
+         {
+          loading ? (<Loder></Loder>) : (
+          <div data-aos="fade-up-right" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
         {
-          loading ? (<Loder></Loder>) : (tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>))
+           (tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>))
           
         }
       </div>
+          )
+         }
+      
         </section>      
      
         <section data-aos='zoom-in' className=' w-11/12 mx-auto lg:text-left mt-10'>

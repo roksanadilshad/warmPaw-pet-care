@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import React, { use, useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
 import ErrorDetails from "./ErrorDetails";
 import toast from "react-hot-toast";
 import Aos from "aos";
+import { AuthContext } from "../Context/AuthContext";
 
 const PetDetails = () => {
   const { id } = useParams();
   const details = useLoaderData();
+  const {user} = use(AuthContext);
+  const [formData, setFormData] = useState({
+    name: user?.displayName || "",
+    email: user?.email || "",
+  });
+
    useEffect(() => {
                      Aos.init({
                        duration: 1000,
@@ -36,7 +43,8 @@ const PetDetails = () => {
 
                  const handleOnSubmit = (e) =>{
                     e.preventDefault();
-                   toast.success('Booked Successfully')
+                   toast.success('Booked Successfully');
+                    setFormData({ name: "", email: "" });
                  }
 
                  
@@ -71,9 +79,13 @@ const PetDetails = () => {
 
        <fieldset className="fieldset border-[1px] p-5 m-5 border-amber-600 rounded-xl">
           <label className="label">Name</label>
-          <input required type="text" name="name" className="input" placeholder="Your Name" />
+          <input onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  } value={formData.name} required type="text" name="name" className="input w-full" placeholder="Your Name" />
           <label className="label">Email</label>
-          <input required type="email" name="email" className="input" placeholder="Youir Email" />
+          <input onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  } value={formData.email} required type="email" name="email" className="input w-full" placeholder="Youir Email" />
           <button className="btn text-white mt-4 btn-success ">Book Now</button>
         </fieldset>
       </form>

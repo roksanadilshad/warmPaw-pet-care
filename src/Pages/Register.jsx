@@ -4,6 +4,7 @@ import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { FaEye } from 'react-icons/fa';
 import { LuEyeClosed } from 'react-icons/lu';
+import toast from 'react-hot-toast';
 
 const Registration = () => {
      const {createUser, setUser, signInWithGoogle, updateUserProfile} = use(AuthContext);
@@ -27,6 +28,7 @@ const navigate = useNavigate();
 
          if(!passwordPattern.test(password)){
           setError('Passowerd must be contain at least 6 characters long, include one uppercase, one lowercase and special character')
+          toast.error('Passowerd must be contain at least 6 characters long, include one uppercase, one lowercase and special character')
           return
          }
 
@@ -42,7 +44,7 @@ const navigate = useNavigate();
          setSuccess(false);
 
          if(!terms){
-          setError('Please accept our terms and condition.');
+          toast.error('Please accept our terms and condition.');
           return;
          }
 

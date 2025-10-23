@@ -13,7 +13,7 @@ const PrivateRoute = ({children}) => {
     if(loading){
         return <Loder></Loder>
     };
-    if(user){
+    if(!user){
         return children;
     }
     

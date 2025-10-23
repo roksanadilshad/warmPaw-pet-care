@@ -42,10 +42,10 @@ const PetDetails = () => {
                  
 
   return (
-    <div className="flex justify-center items-center flex-col lg:flex-row">
+    <div className="flex justify-center items-center ">
     <div className="card my-20 shadow-sm">
       
-      <div className="px-4 flex justify-between items-center">
+      <div className="px-4 flex justify-between items-center flex-col lg:flex-row">
        <div data-aos="fade-up-right">
       <img src={image} alt={serviceName} className="rounded-lg mb-4" />
        </div>
@@ -53,17 +53,17 @@ const PetDetails = () => {
       <h2 className=" lg:text-5xl text-3xl text-center font-bold mb-4">{serviceName}</h2>
       <p className="text-xl pb-2">{description}</p>
      
-      <p className="text-[18px]"><strong>ProviderName:</strong> {providerName}</p>
-      <p className="text-[18px]"><strong>ProviderEmail:</strong> <span className="text-info">{providerEmail}</span></p>
+      <p className="lg:text-[18px] text-[16px]"><strong>ProviderName:</strong> {providerName}</p>
+      <p className="lg:text-[18px] text-[16px]"><strong>ProviderEmail:</strong> <span className="text-info">{providerEmail}</span></p>
       <div className="flex items-center justify-between">
 
       <p className="flex text-[16px] items-center gap-1"><strong>Rating:</strong> {rating}<FaStar className="text-amber-600"></FaStar></p>
-      <p className="text-[18px]"><strong>Price:</strong> {price}$</p>
+      <p className="lg:text-[18px] text-[16px]"><strong>Price:</strong> {price}$</p>
       </div>
       <div className="flex items-center  justify-between">
 
-       <p className="text-[18px]"><strong>Category:</strong> {category}</p>
-      <p className="text-[18px]"><strong>SlotsAvailable:</strong> {slotsAvailable}</p>
+       <p className="lg:text-[18px] text-[16px]"><strong>Category:</strong> {category}</p>
+      <p className="lg:text-[18px] text-[16px]"><strong>SlotsAvailable:</strong> {slotsAvailable}</p>
       </div>
 
      
@@ -74,7 +74,7 @@ const PetDetails = () => {
           <input required type="text" name="name" className="input" placeholder="Your Name" />
           <label className="label">Email</label>
           <input required type="email" name="email" className="input" placeholder="Youir Email" />
-          <button className="btn text-white mt-4 btn-success">Book Now</button>
+          <button className="btn text-white mt-4 btn-success ">Book Now</button>
         </fieldset>
       </form>
        </div>

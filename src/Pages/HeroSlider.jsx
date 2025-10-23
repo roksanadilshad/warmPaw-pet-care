@@ -46,14 +46,14 @@ const HeroSlider = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
 
               {/* Text Content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
                 <h2 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
                   {slide.title}
                 </h2>
                 <p className="text-lg md:text-2xl font-light mb-6 max-w-2xl">
                   {slide.subtitle}
                 </p>
-                <button className="btn text-white btn-warning text-black font-semibold rounded-full shadow-lg hover:scale-105 transition">
+                <button className="btn text-white btn-warning  font-semibold rounded-full shadow-lg hover:scale-105 transition">
                   Explore Collection
                 </button>
               </div>

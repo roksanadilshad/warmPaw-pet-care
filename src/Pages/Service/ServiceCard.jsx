@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { use, useEffect } from 'react';
 import PetsCards from '../PetsCards';
 import { IoStar } from 'react-icons/io5';
 import { Link } from 'react-router';
 import Aos from 'aos';
+import { AuthContext } from '../../Context/AuthContext';
+import Loder from '../Loder';
 
 const ServiceCard = ({service = []}) => {
+    const {loading} = use(AuthContext)
     useEffect(() => {
             Aos.init({
               duration: 1500,
@@ -17,7 +20,9 @@ serviceId
 } =service
     return (
         <div>
-            <div data-aos='top-center' className="max-w-4xl mx-auto p-6 card shadow-lg rounded-2xl">
+            {
+                loading ? (<Loder></Loder>) : (
+<div data-aos='top-center' className="max-w-4xl mx-auto p-6 card shadow-lg rounded-2xl">
   <figure><img src={image} className='rounded-xl w-full h-96 object-cover' alt="Dog Coat" /></figure>
   <div className="card-body">
     <h2 className="text-xl font-semibold">{serviceName}</h2>
@@ -39,6 +44,9 @@ serviceId
     </div>
   </div>
 </div>
+                )
+            }
+            
         </div>
     );
 };

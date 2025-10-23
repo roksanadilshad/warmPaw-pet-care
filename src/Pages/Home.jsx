@@ -8,10 +8,11 @@ import VetsCards from './VetsCards';
 import Lottie from 'lottie-react';
 import Aos from 'aos';
 import 'animate.css';
+import Loder from './Loder';
 
 
 const Home = () => {
-  const { pets, tips , vets} = useLoaderData();
+  const { pets, tips , vets, loading} = useLoaderData();
   //console.log(vets);
   useEffect(() => {
     Aos.init({
@@ -21,7 +22,10 @@ const Home = () => {
   }, []);
   
     return (
-        <div data-aos="fade-up-right" className='relative w-full home'>
+      <div>
+{
+  loading ? (<Loder></Loder>) : (
+ <div data-aos="fade-up-right" className='relative w-full hero-container'>
            <HeroSlider></HeroSlider>
     <section>
       <div>
@@ -44,7 +48,8 @@ const Home = () => {
          ></Title>
       <div data-aos="fade-up-right" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
         {
-          tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>)
+          loading ? (<Loder></Loder>) : (tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>))
+          
         }
       </div>
         </section>      
@@ -85,6 +90,10 @@ const Home = () => {
       </div>
         </section>     
         </div>
+  )
+}
+       
+      </div>
        
     );
 };

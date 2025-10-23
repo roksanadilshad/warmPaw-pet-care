@@ -53,7 +53,7 @@ const HeroSlider = () => {
                 <p className="text-lg md:text-2xl font-light mb-6 max-w-2xl">
                   {slide.subtitle}
                 </p>
-                <button className="btn btn-warning text-black font-semibold rounded-full shadow-lg hover:scale-105 transition">
+                <button className="btn text-white btn-warning text-black font-semibold rounded-full shadow-lg hover:scale-105 transition">
                   Explore Collection
                 </button>
               </div>

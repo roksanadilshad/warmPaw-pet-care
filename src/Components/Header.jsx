@@ -21,7 +21,7 @@ const Header = () => {
   <div className="navbar-start">
     <div className="dropdown">
        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
@@ -44,11 +44,11 @@ const Header = () => {
     {
         user ? 
         (<>
-        <a className=""><img src={user?.photoURL || 'https://images.unsplash.com/photo-1747592771443-e15f155b1faf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=500'} className='w-12 h-12 rounded-full' title={user.displayName} /></a>
-        <button onClick={handleSignout} className='btn btn-secondary ml-2'>Log Out</button>
+        <a className=""><img src={user?.photoURL || 'https://images.unsplash.com/photo-1747592771443-e15f155b1faf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=500'} className='lg:w-12 lg:h-12 w-10 h-10 rounded-full' title={user.displayName} /></a>
+        <button onClick={handleSignout} className='btn btn-success border-[#B4C408] text-white ml-2'>Log Out</button>
         </>) : (<>
          <NavLink className='btn !text-white btn-success  mr-1 ' to='/register'>Register</NavLink>
-       <NavLink className='btn mr-1 btn-warning text-white' to='/login'>Login</NavLink>
+       <NavLink className='btn shadow mr-1 btn-warning !text-white' to='/login'>Login</NavLink>
         </>)
 
     }

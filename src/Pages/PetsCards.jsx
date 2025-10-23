@@ -16,9 +16,11 @@ serviceId
     return (
         <div>
 
-            <div className="bg-amber-50 card shadow-lg rounded-2xl hover:scale-105 transition-all">
-  <figure><img src={image} className='rounded-xl w-full h-96 object-cover' alt="Dog Coat" /></figure>
-  <div className="card-body">
+            <div className="bg-amber-50 card shadow-lg rounded-2xl flex flex-col h-full hover:scale-105 transition-all">
+  <figure>
+    <img src={image} className='rounded-xl w-full h-96 object-cover' alt="Dog Coat" />
+    </figure>
+  <div className="card-body flex-grow ">
     <h2 className="text-xl font-semibold">{serviceName}</h2>
     <table>
         <tbody>
@@ -33,8 +35,7 @@ serviceId
         </tbody>
     </table>
     <div className="animate__animated animate__backInDown  card-actions justify-end">
-        <Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>
-     
+        <Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning text-white w-full ">View Details</button></Link>
     </div>
   </div>
 </div>

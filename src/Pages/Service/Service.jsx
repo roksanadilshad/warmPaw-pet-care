@@ -16,7 +16,7 @@ const Service = () => {
     return (
         <div data-aos='slide-right' >
             <div><title>WarmPaws Service</title></div>
-            <div className='grid grid-cols-2 gap-10 py-20'>
+            <div className='grid lg:grid-cols-2 gap-10 py-20'>
             {
                 data.map(service => <ServiceCard service={service} key={service.serviceId}></ServiceCard>)
             }

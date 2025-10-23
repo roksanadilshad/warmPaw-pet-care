@@ -8,7 +8,7 @@ specialization
 } = vetsCard
     
     return (
-         <div className="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden m-4 mx-auto w-full">
+         <div className="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden lg:m-4 mx-auto w-full">
       <img src={image} alt={name} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-1">{name}</h2>
@@ -17,7 +17,7 @@ specialization
         <p className="text-sm text-gray-600"><strong>Experience:</strong> {experience}</p>
         <p className="text-sm text-gray-600"><strong>Email:</strong><span className='text-info'>{email}</span></p>
         <p className="text-sm text-gray-600"><strong>Phone:</strong> {phone}</p>
-        <button className="mt-3 btn btn-success w-full text-white py-2 rounded-lg hover:btn-info transition">
+        <button className="mt-3 border-success btn btn-success w-full text-white py-2 rounded-lg hover:btn-info hover:border-info transition">
           Contact
         </button>
       </div>

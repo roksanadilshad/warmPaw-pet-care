@@ -74,13 +74,13 @@ const Profile = () => {
            defaultValue={user.photoURL || ""}
         />
         <div className="flex gap-2">
-      <button type="submit" className="btn btn-success flex-1">
+      <button type="submit" className="btn text-white btn-success border-success flex-1">
         Save
       </button>
       <button
         type="button"
         onClick={() => setIsEditing(false)}
-        className="btn btn-error flex-1"
+        className="btn text-white btn-error flex-1"
       >
         Cancel
       </button>

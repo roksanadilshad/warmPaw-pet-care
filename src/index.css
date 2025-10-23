@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @plugin "daisyui/theme" {
   name: "light";
@@ -16,7 +16,7 @@
 
 }
 body{
-  font-family: inherit;
+  font-family: "Libre Baskerville", serif;
 }
 
 .active{

@@ -2,7 +2,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-[#B6771D] text-white rounded p-10">
+      <div className='animate__animated animate__bounceInUp'>
+
+        <footer  className="  footer footer-horizontal footer-center bg-[#B6771D] text-white rounded p-10">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">Contact info</a>
     <a className="link link-hover">Privacy policy</a>
@@ -45,9 +47,10 @@ const Footer = () => {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by WarmPaws </p>
   </aside>
 </footer>
+      </div>
     );
 };
 

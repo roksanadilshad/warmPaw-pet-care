@@ -1,9 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const ErrorPage = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            <div><img className='h-screen w-full' src="https://plus.unsplash.com/premium_photo-1664303028333-80fef943aea5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNhZCUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400" alt="" /></div>
+            <div className='text-center'>
+                <img className='h-screen ' src="https://cdni.iconscout.com/illustration/premium/thumb/cat-with-404-flag-illustration-svg-download-png-7703208.png" alt="" />
+                <button
+      onClick={() => navigate(-1)}
+      className="bg-amber-600 text-white my-4 py-2 px-4 text-center rounded hover:bg-amber-600"
+    >
+      Go Back
+    </button>
+                </div>
         </div>
     );
 };

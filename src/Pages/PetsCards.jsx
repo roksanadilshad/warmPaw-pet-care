@@ -1,6 +1,8 @@
 import React from 'react';
 import { IoStar, IoStarOutline } from 'react-icons/io5';
 import { Link } from 'react-router';
+import 'animate.css';
+
 
 const PetsCards = ({petCard = []}) => {
     //const pets = useLoaderData();
@@ -30,7 +32,7 @@ serviceId
         </tr>
         </tbody>
     </table>
-    <div className="card-actions justify-end">
+    <div className="animate__animated animate__backInDown  card-actions justify-end">
         <Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>
      
     </div>

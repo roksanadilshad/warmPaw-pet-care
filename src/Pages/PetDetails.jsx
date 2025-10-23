@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
+import ErrorDetails from "./ErrorDetails";
 
 const PetDetails = () => {
   const { id } = useParams();
@@ -15,7 +16,7 @@ const PetDetails = () => {
 
   console.log(singlePet);
 
-  if (!singlePet) return <h2>Pet not found</h2>;
+  if (!singlePet) return <ErrorDetails></ErrorDetails>;
 
                   const {
                  category

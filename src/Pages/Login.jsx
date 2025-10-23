@@ -24,12 +24,12 @@ const Login = () => {
     e.preventDefault();
       const email = e.target.email.value;
       const password = e.target.password.value;
-     setEmail(email)
+     
       //console.log(email, password);
       setErr(null)
       signInUser(email, password)
-      .then(result =>{
-        console.log(result);
+      .then(() =>{
+        //console.log(result);
         navigate(from, {replace:true})
         toast.success('Logged in successfully! 🎉');
       })
@@ -57,8 +57,9 @@ const Login = () => {
       setShowPass(!showPass)
     }
 
-    const handleForgetPassword = () =>{
-      navigate('/forgetPassword', {state: { email }})
+    const handleForgetPassword = (e) =>{
+      e.preventDefault();
+      navigate('/forgetPassword', {state: { email, from: location.state?.from?.pathname || '/' }})
     }
 
    
@@ -77,7 +78,12 @@ const Login = () => {
 
         <fieldset className="fieldset">
           <label  className="label">Email</label>
-          <input  name='email' type="email" className="input" placeholder="Email" />
+          <input 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)}  name='email' 
+          type="email" 
+          className="input" 
+          placeholder="Email" />
           <label className="label">Password</label>
           <div className='relative'>
                     <input name='password' type={showPass ? 'text' : "password"} className="input" placeholder="Password" />

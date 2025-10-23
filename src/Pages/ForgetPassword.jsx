@@ -1,13 +1,14 @@
 import React, { use, useEffect, useRef, useState } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import toast from 'react-hot-toast';
-import { Link, useLocation } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 const ForgetPassword = () => {
    const {passwordReset} = use(AuthContext);
    const [email,setEmail] = useState("");
    const emailRef = useRef();
    const location = useLocation();
+   const navigate = useNavigate()
 
     useEffect(() => {
     if (location.state?.email) {
@@ -23,23 +24,26 @@ const ForgetPassword = () => {
       toast.error('Please Enter Your Email First');
       return
     }
-         passwordReset(email)
+
+    passwordReset(email)
          .then(() => {
       toast.success('Password reset email sent! Check your inbox 📩');
+       window.open("https://mail.google.com", "_blank");
       setTimeout(() => {
-          window.location.href = "https://mail.google.com";
+         navigate('/login', { replace: true });"_blank";
         }, 2000);
      })
      
      .catch((err) =>{
-         toast.error(err.message);
-         
+         toast.error(err.message);     
      })
+    
+         
     }
     return (
         <div>
-            <div className="flex justify-center items-center h-screen bg-base-200">
-      <div className="card bg-base-100 w-96 p-6 shadow-xl">
+            <div className="flex justify-center items-center h-screen ">
+      <div className="card w-96 p-6 shadow-xl">
         <h2 className="text-2xl font-bold text-center mb-4">Reset Password</h2>
         <form onSubmit={handleReset}>
           <input
@@ -50,7 +54,7 @@ const ForgetPassword = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="btn btn-neutral w-full">Send Reset Email</button>
+          <button className="btn btn-success text-white w-full">Send Reset Email</button>
         </form>
         <p className="text-center mt-4">
           <Link to="/login" className="text-amber-500 hover:underline">

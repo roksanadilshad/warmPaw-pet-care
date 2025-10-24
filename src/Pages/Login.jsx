@@ -5,10 +5,11 @@ import { LuEyeClosed } from "react-icons/lu";
 import { FaEye } from "react-icons/fa";
 import toast, { ToastBar } from "react-hot-toast";
 import ForgetPassword from "./ForgetPassword";
+import Loder from "./Loder";
 
 
 const Login = () => {
-    const {signInUser, signInWithGoogle} = use(AuthContext);
+    const {signInUser, signInWithGoogle, loading} = use(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     
@@ -59,12 +60,14 @@ const Login = () => {
 
     const handleForgetPassword = (e) =>{
       e.preventDefault();
-      navigate('/forgetPassword', {state: { email, from: location.state?.from?.pathname || '/' }})
+      navigate('/forgetPassword', {state: { email }})
     }
 
    
     return (
-       <div className=" lg:mt-40 mt-20  min-h-screen">
+      <div>
+{
+  loading ? (<Loder></Loder>) : (<div className=" lg:mt-40 mt-20  min-h-screen">
   <div className=" flex-col flex justify-center items-center ">
     <div className="text-center">
       <h1 className="text-5xl font-bold text-red-900">Login now!</h1>
@@ -107,6 +110,11 @@ const Login = () => {
     </div>
   </div>
 </div>
+
+  )
+}
+       
+      </div>
     );
 };
 

@@ -64,7 +64,7 @@ const Profile = () => {
           type="text"
           placeholder="Enter new name"
           name='name'
-          // defaultValue={user.displayName || ""}
+          defaultValue={user.displayName || ""}
           className="input text-[#777] rounded-xl input-bordered"
           required
         />
@@ -78,7 +78,7 @@ const Profile = () => {
           name='photoURL'
           required
           className="input text-[#777] rounded-xl input-bordered"
-          //  defaultValue={user.photoURL || ""}
+          defaultValue={user.photoURL || ""}
         />
                       </div>
         <div className="flex gap-2">

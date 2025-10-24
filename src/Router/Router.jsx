@@ -15,10 +15,11 @@ import ForgetPassword from '../Pages/ForgetPassword';
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component:Root,
+    element:<Root></Root>,
     children: [
         {
             index: true,
+            path:'/',
               loader: async () => {
     const [petsRes, tipsRes, vetsRes] = await Promise.all([
       fetch('/pets.json'),
@@ -35,15 +36,15 @@ export const router = createBrowserRouter([
 
     return { pets, tips,  vets};
   },
-            Component: Home,
+            element:<Home></Home>,
         },
         {
           path:'/register',
-          Component: Registration
+          element:<Registration></Registration>
         },
         {
           path:'/login' ,
-          Component: Login
+         element:<Login></Login>
         },
         {
           path:'/service' ,
@@ -61,11 +62,11 @@ export const router = createBrowserRouter([
         },
         {
           path: '/forgetPassword',
-          Component: ForgetPassword
+          element:<ForgetPassword></ForgetPassword>
         },
         {
           path: '/*' ,
-          Component: ErrorPage
+          element:<ErrorPage></ErrorPage>
         }
        
     ]

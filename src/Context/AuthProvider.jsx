@@ -38,13 +38,13 @@ const AuthProvider = ({children}) => {
     }
 
     useEffect(()=>{
-      const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
+            const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
         setUser(currentUser);
         setLoading(false);
-      })
-      return () =>{
+      });
+       return () =>{
         unsubscribe();
-      }
+      } 
     }, [])
 
     const authInfo = {
@@ -60,9 +60,9 @@ const AuthProvider = ({children}) => {
         setLoading
     }
     return (
-        <AuthContext value={authInfo}>
+        <AuthContext.Provider value={authInfo}>
             {children}
-        </AuthContext>
+        </AuthContext.Provider>
     );
 };
 

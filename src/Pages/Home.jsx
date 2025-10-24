@@ -81,7 +81,7 @@ const Home = () => {
               <h2 className='text-2xl font-medium py-2'>We love our job!</h2>
               <h2 className='text-6xl font-bold py-4'>We'll Make Your Pets Really Happy</h2>
               <p className='text-[#777] py-2'>Hundreds of pet owners trust us to take care
-                 of their beloved family members. <br className='hidden lg:block'/> You won't be disappointed.</p>
+                 of their beloved family members. <br/> You won't be disappointed.</p>
               <Link to='/service' className=' btn btn-success border-2 border-[#B4C408] text-white hover:btn-info hover:border-info'>Learn More</Link>
                
             </div>

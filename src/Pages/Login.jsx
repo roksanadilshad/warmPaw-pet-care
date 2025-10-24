@@ -60,12 +60,14 @@ const Login = () => {
 
     const handleForgetPassword = (e) =>{
       e.preventDefault();
-      navigate('/forgetPassword', {state: { email }})
+      navigate('/forgetPassword', {state: { email: email,  from: location.state?.from?.pathname || '/'}})
+     
     }
 
    
     return (
       <div>
+        <div><title>WarmPaws Log in</title></div>
 {
   loading ? (<Loder></Loder>) : (<div className=" lg:mt-40 mt-20  min-h-screen">
   <div className=" flex-col flex justify-center items-center ">

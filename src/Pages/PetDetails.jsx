@@ -50,6 +50,8 @@ const PetDetails = () => {
                  
 
   return (
+    <div>
+<div><title>WarmPaws pet details</title></div>
     <div className="flex justify-center items-center ">
     <div className="card my-20 shadow-sm">
       
@@ -91,6 +93,7 @@ const PetDetails = () => {
       </form>
        </div>
       </div>
+    </div>
     </div>
     </div>
   );

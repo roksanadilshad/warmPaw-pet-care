@@ -63,7 +63,7 @@ const Home = () => {
       
         </section>      
      
-        <section data-aos='zoom-in' className='  lg:text-left mt-10'>
+        {/* <section data-aos='zoom-in' className='  lg:text-left mt-10'>
         
           <div className=' flex items-center lg:justify-between lg:flex-row flex-col-reverse'>
            
@@ -86,7 +86,7 @@ const Home = () => {
                
             </div>
           </div>
-          </section> 
+          </section>  */}
            <section data-aos='fade-up-right'>
          <Title 
          title='Meet Our Expert Vets'

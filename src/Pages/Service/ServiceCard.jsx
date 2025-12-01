@@ -17,7 +17,9 @@ const ServiceCard = ({service = []}) => {
     const {serviceName
 ,image, price, rating, 
 serviceId
-} =service
+} =service;
+
+
     return (
         <div>
             {

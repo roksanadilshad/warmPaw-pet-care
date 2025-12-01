@@ -14,7 +14,7 @@ const TipsCards = ({tipsCard = []}) => {
 
     return (
         <div>
-            <div className="max-w-sm bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 mx-auto">
+            <div className="max-w-sm bg-primary shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 mx-auto">
       <img
         src={image}
         alt={title}

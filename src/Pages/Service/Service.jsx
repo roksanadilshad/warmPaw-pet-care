@@ -19,7 +19,7 @@ const Service = () => {
     
     return (
         
-        <div data-aos='slide-right' >
+        <div data-aos='slide-right' className='w-11/12 mx-auto'>
             <div><title>WarmPaws Service</title></div>
             <Title
             title='Our Services'
@@ -27,7 +27,7 @@ const Service = () => {
             ></Title>
             {
                 loading ? (<Loder></Loder>) : (
-<div className='grid lg:grid-cols-2 gap-10 pb-5 lg:mb-20'>
+<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:mb-20'>
             { 
                 data.map(service => <ServiceCard service={service} key={service.serviceId}></ServiceCard>)
             }

@@ -27,14 +27,14 @@ const Home = () => {
   loading ? (<Loder></Loder>) : (
  <div data-aos="fade-up-right" className='relative w-11/12 mx-auto '>
            <HeroSlider></HeroSlider>
-    <section>
+    <section className='lg:py-10'>
       <div>
         <Title 
         title="Popular Winter Care Services"
         description=' As the chilly season approaches, keeping yourself, your home, and your pets safe and comfortable is essential. '></Title>
          {
           loading ? (<Loder></Loder>) : (
- <div data-aos="fade-up-left" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 '>
+ <div data-aos="fade-up-left" className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 '>
           {
             pets.map(petCard => <PetsCards key={petCard.serviceId
 } petCard={petCard}></PetsCards>)

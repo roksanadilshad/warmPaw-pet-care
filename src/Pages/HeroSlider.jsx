@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -27,7 +28,7 @@ const slides = [
 const HeroSlider = () => {
     return (
         <div>
-             <div className="w-full h-screen relative">
+             <div className="w-full h-[70vh] relative">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -53,9 +54,9 @@ const HeroSlider = () => {
                 <p className="text-lg md:text-2xl font-light mb-6 max-w-2xl">
                   {slide.subtitle}
                 </p>
-                <button className="btn text-white btn-warning  font-semibold rounded-full shadow-lg hover:scale-105 transition">
+                <Link to='service' className="btn text-white btn-warning  font-semibold rounded-full shadow-lg hover:scale-105 transition">
                   Explore Collection
-                </button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

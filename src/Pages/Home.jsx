@@ -25,7 +25,7 @@ const Home = () => {
       <div>
 {
   loading ? (<Loder></Loder>) : (
- <div data-aos="fade-up-right" className='relative w-full hero-container'>
+ <div data-aos="fade-up-right" className='relative w-11/12 mx-auto '>
            <HeroSlider></HeroSlider>
     <section>
       <div>
@@ -34,7 +34,7 @@ const Home = () => {
         description=' As the chilly season approaches, keeping yourself, your home, and your pets safe and comfortable is essential. '></Title>
          {
           loading ? (<Loder></Loder>) : (
- <div data-aos="fade-up-left" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
+ <div data-aos="fade-up-left" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 '>
           {
             pets.map(petCard => <PetsCards key={petCard.serviceId
 } petCard={petCard}></PetsCards>)
@@ -52,7 +52,7 @@ const Home = () => {
          ></Title>
          {
           loading ? (<Loder></Loder>) : (
-          <div data-aos="fade-up-right" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-11/12 mx-auto'>
+          <div data-aos="fade-up-right" className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 '>
         {
            (tips.map(tipsCard => <TipsCards tipsCard={tipsCard} key={tipsCard.tipId}></TipsCards>))
           
@@ -63,7 +63,7 @@ const Home = () => {
       
         </section>      
      
-        <section data-aos='zoom-in' className=' w-11/12 mx-auto lg:text-left mt-10'>
+        <section data-aos='zoom-in' className='  lg:text-left mt-10'>
         
           <div className=' flex items-center lg:justify-between lg:flex-row flex-col-reverse'>
            
@@ -92,7 +92,7 @@ const Home = () => {
          title='Meet Our Expert Vets'
          description='introduces our team of skilled veterinarians who are dedicated to providing top-quality care for your pets. Learn about their expertise, experience, and compassionate approach to keeping your furry friends healthy and happy.'
          ></Title>
-      <div  className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto mb-4'>
+      <div  className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mb-4'>
         {
           vets.map(vetsCard => <VetsCards vetsCard={vetsCard} key={vetsCard.vetId}></VetsCards>)
         }

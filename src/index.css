@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 @plugin "daisyui/theme" {
   name: "light";
@@ -18,11 +19,12 @@
 }
 body{
   font-family: "Libre Baskerville", serif;
+  background-color: #F9F6E6;
 }
 
-.active{
+/* .active{
     @apply border-b border-amber-400 text-amber-500 font-bold
-}
-body{
+} */
+/* body{
  @apply bg-gradient-to-r from-[#FFB347] to-[#FFF8E7] 
-}
+} */

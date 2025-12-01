@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
         {
           path:'/service' ,
           loader:() =>fetch('/pets.json'),
-          element: <PrivateRoute><Service></Service></PrivateRoute>
+          element: <Service></Service>
         },
         {
           path:'/profile',

@@ -5,16 +5,16 @@ import { AuthContext } from "../Context/AuthContext";
 const Contact = () => {
     const { user } = use(AuthContext)
   return (
-    <div className="bg-secondary w-full py-16">
+    <div className="bg-secondary w-full py-8 lg:py-16">
       <div className="w-11/12 mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-14">
-          <h1 className="text-5xl font-extrabold text-gray-700 flex justify-center gap-2">
-            Contact <span className="text-amber-400">WarmPaws</span>
+        <div className="text-center mb-7 lg:mb-14">
+          <h1 className="lg:text-5xl text-3xl font-extrabold text-gray-700 flex justify-center items-center gap-2">
+            Contact <span className="text-amber-400 ">WarmPaws</span>
             <FaPaw className="text-4xl text-amber-400 mt-2" />
           </h1>
-          <p className="max-w-2xl mx-auto text-gray-700 mt-3">
+          <p className="max-w-2xl mx-auto text-gray-500 mt-3">
             Have questions, need support, or want expert winter-care advice for your furry companion?
             We're here to help anytime!
           </p>
@@ -23,8 +23,8 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12">
 
           {/* Contact Form */}
-          <div className="bg-primary p-10 rounded-3xl shadow-xl border border-primary">
-            <h2 className="text-3xl font-bold text-gray-700 mb-6">Get in Touch</h2>
+          <div className="bg-primary lg:p-10 p-5 rounded-3xl shadow-xl border border-primary">
+            <h2 className="lg:text-3xl text-2xl font-bold text-gray-700 mb-3 lg:mb-6">Get in Touch</h2>
 
             <form className="space-y-5">
               <div>
@@ -33,7 +33,7 @@ const Contact = () => {
                   type="text"
                   defaultValue={user?.displayName}
                   placeholder="Enter your full name"
-                  className="w-full bg-secondary mt-1 p-3  rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 lg:p-3 p-1  rounded-xl outline-none focus:border-[#8D77AB]"
                 />
               </div>
 
@@ -43,7 +43,7 @@ const Contact = () => {
                   type="email"
                   defaultValue={user?.email}
                   placeholder="Enter your email"
-                  className="w-full bg-secondary mt-1 p-3 rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 lg:p-3 p-1 rounded-xl outline-none focus:border-[#8D77AB]"
                 />
               </div>
 
@@ -52,11 +52,11 @@ const Contact = () => {
                 <textarea
                   rows="5"
                   placeholder="Write your message..."
-                  className="w-full bg-secondary mt-1 p-3 rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 lg:p-3 p-1 rounded-xl outline-none focus:border-[#8D77AB]"
                 ></textarea>
               </div>
 
-              <button className="w-full py-3 rounded-xl bg-[#8D77AB] text-white text-lg font-semibold hover:bg-[#BAD8B6] transition-all">
+              <button className="w-full lg:py-3 py-1rounded-xl bg-[#8D77AB] text-white text-lg font-semibold hover:bg-[#BAD8B6] transition-all">
                 Send Message
               </button>
             </form>
@@ -68,36 +68,36 @@ const Contact = () => {
             {/* Info Boxes */}
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
 
-              <div className="bg-primary shadow-lg p-6 rounded-2xl border border-primary">
+              <div className="bg-primary shadow-lg lg:p-6 p-3 rounded-2xl border border-primary">
                 <FaPhoneAlt className="text-4xl text-[#8D77AB] mb-3" />
-                <h3 className="font-bold text-xl text-[#850E35]">Phone</h3>
+                <h3 className="font-bold text-xl text-gray-700">Phone</h3>
                 <p className="text-gray-600 mt-1">+880 1234-567890</p>
               </div>
 
-              <div className="bg-primary shadow-lg p-6 rounded-2xl border border-primary">
+              <div className="bg-primary shadow-lg lg:p-6 p-3 rounded-2xl border border-primary">
                 <FaEnvelope className="text-4xl text-[#8D77AB] mb-3" />
-                <h3 className="font-bold text-xl text-[#850E35]">Email</h3>
+                <h3 className="font-bold text-xl text-gray-700">Email</h3>
                 <p className="text-gray-600 mt-1">help@warmpaws.com</p>
               </div>
 
-              <div className="bg-primary shadow-lg p-6 rounded-2xl border border-primary">
+              <div className="bg-primary shadow-lg lg:p-6 p-3 rounded-2xl border border-primary">
                 <FaMapMarkerAlt className="text-4xl text-[#8D77AB] mb-3" />
-                <h3 className="font-bold text-xl text-[#850E35]">Location</h3>
+                <h3 className="font-bold text-xl text-gray-700">Location</h3>
                 <p className="text-gray-600 mt-1">
                   Banani, Dhaka, Bangladesh
                 </p>
               </div>
 
-              <div className="bg-primary shadow-lg p-6 rounded-2xl border border-primary">
+              <div className="bg-primary shadow-lg lg:p-6 p-3 rounded-2xl border border-primary">
                 <FaPaw className="text-4xl text-[#8D77AB] mb-3" />
-                <h3 className="font-bold text-xl text-[#850E35]">Service Hours</h3>
+                <h3 className="font-bold text-xl text-gray-700">Service Hours</h3>
                 <p className="text-gray-600 mt-1">10:00 AM – 8:00 PM (Everyday)</p>
               </div>
             </div>
 
             {/* Google Map */}
             <div className="mt-10">
-              <h3 className="text-2xl font-bold text-[#850E35] mb-4">Find Us on Map</h3>
+              <h3 className="text-2xl font-bold text-gray-700 mb-4">Find Us on Map</h3>
               <iframe
                 title="map"
                 className="w-full h-64 rounded-3xl border-4 border-primary"

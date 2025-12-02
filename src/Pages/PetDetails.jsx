@@ -27,7 +27,7 @@ const PetDetails = () => {
 
   const {
     serviceName,
-    category,
+
     providerEmail,
     providerName,
     slotsAvailable,

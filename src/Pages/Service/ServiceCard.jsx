@@ -24,11 +24,11 @@ serviceId
         <div>
             {
                 loading ? (<Loder></Loder>) : (
-<div data-aos='top-center' className="p-4 card shadow-lg bg-primary transition-all text-gray-700 hover:bg-[#BAD8B6] rounded-2xl w-full">
+<div data-aos='top-center' className="lg:p-4 card shadow-lg bg-primary transition-all text-gray-700 hover:bg-[#BAD8B6] rounded-2xl w-full">
   <figure><img src={image} className='rounded-xl w-full h-60 md:h-72 lg:h-80 object-cover' alt="Dog Coat" /></figure>
   <div className="card-body">
     <h2 className="text-xl font-semibold">{serviceName}</h2>
-    <div className='py-2 flex justify-evenly items-center'>
+    <div className='lg:py-2 flex justify-evenly items-center'>
             <p className='font-semibold '>{price}$</p>
             <p className='font-semibold  flex items-center justify-center gap-1'>{rating}<IoStar className='text-amber-400  text-xl mb-1' /></p>
     </div>

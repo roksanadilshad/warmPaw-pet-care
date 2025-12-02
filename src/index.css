@@ -11,6 +11,7 @@
   --color-acent: #F4F1DE;
   --color-neturl: #2E2E2E;
   --color-info: #BAD8B6;
+  --color-warning: #8D77AB;
   --color-cards: #FBC4AB;
   --color-success: #8D77AB
   
@@ -20,6 +21,11 @@
 body{
   font-family: "Libre Baskerville", serif;
   background-color: #F9F6E6;
+}
+
+.active{
+  color: #8D77AB;
+  border-bottom: 1px solid #BAD8B6;
 }
 
 /* .active{

@@ -58,8 +58,8 @@ const Profile = () => {
         </div>
         {/* Profile Edit Form */}
         {isEditing && (
-          <div data-aos="fade-up" className="bg-primary p-8 rounded-3xl shadow-xl border border-[#FFC4C4]">
-            <h3 className="text-2xl font-bold text-[#850E35] mb-6 text-center">Edit Profile</h3>
+          <div data-aos="fade-up" className="bg-primary p-8 rounded-3xl shadow-xl border border-primary">
+            <h3 className="text-2xl font-bold text-gray-700 mb-6 text-center">Edit Profile</h3>
             <form onSubmit={handleUpdate} className="flex flex-col gap-4 max-w-xl mx-auto">
               <div className="flex flex-col gap-1">
                 <label className="font-medium text-gray-700">Full Name</label>
@@ -67,7 +67,7 @@ const Profile = () => {
                   type="text"
                   name="name"
                   defaultValue={user?.displayName || ""}
-                  className="input input-bordered rounded-xl focus:border-[#EE6983] outline-none"
+                  className="input input-bordered rounded-xl focus:border-success outline-none"
                   required
                 />
               </div>
@@ -77,7 +77,7 @@ const Profile = () => {
                   type="url"
                   name="photoURL"
                   defaultValue={user?.photoURL || ""}
-                  className="input input-bordered rounded-xl focus:border-[#EE6983] outline-none"
+                  className="input input-bordered rounded-xl focus:border-success outline-none"
                   required
                 />
               </div>
@@ -86,7 +86,7 @@ const Profile = () => {
                 <button
                   type="button"
                   onClick={() => setIsEditing(false)}
-                  className="btn btn-error flex-1 text-white"
+                  className="btn btn-info flex-1 text-white"
                 >
                   Cancel
                 </button>
@@ -100,14 +100,14 @@ const Profile = () => {
         <div className="grid lg:grid-cols-2 gap-6">
 
           {/* Change Password Placeholder */}
-          <div data-aos="fade-right" className="bg-primary p-6 rounded-2xl shadow-md border border-[#FFC4C4]">
-            <h3 className="text-xl font-bold text-[#850E35] mb-4">Change Password</h3>
+          <div data-aos="fade-right" className="bg-primary p-6 rounded-2xl shadow-md border border-primary">
+            <h3 className="text-xl font-bold text-gray-700 mb-4">Change Password</h3>
             <p className="text-gray-600">Coming soon…</p>
           </div>
 
           {/* Activity Log Placeholder */}
-          <div data-aos="fade-left" className="bg-primary p-6 rounded-2xl shadow-md border border-[#FFC4C4]">
-            <h3 className="text-xl font-bold text-[#850E35] mb-4">Recent Activity</h3>
+          <div data-aos="fade-left" className="bg-primary p-6 rounded-2xl shadow-md border border-primary">
+            <h3 className="text-xl font-bold text-gray-700 mb-4">Recent Activity</h3>
             <ul className="list-disc list-inside text-gray-600">
               <li>Logged in from desktop</li>
               <li>Updated profile picture</li>
@@ -118,17 +118,17 @@ const Profile = () => {
           {/* Stats Section */}
         <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="bg-primary p-6 rounded-2xl shadow-md flex flex-col items-center gap-2">
-            <FaPaw className="text-4xl text-[#EE6983]" />
+            <FaPaw className="text-4xl text-success" />
             <h3 className="text-xl font-bold">12 Pets</h3>
             <p className="text-gray-600">Added to your account</p>
           </div>
           <div className="bg-primary p-6 rounded-2xl shadow-md flex flex-col items-center gap-2">
-            <FaCalendarCheck className="text-4xl text-[#EE6983]" />
+            <FaCalendarCheck className="text-4xl text-success" />
             <h3 className="text-xl font-bold">5 Appointments</h3>
             <p className="text-gray-600">Completed with vets</p>
           </div>
           <div className="bg-primary p-6 rounded-2xl shadow-md flex flex-col items-center gap-2">
-            <FaUserShield className="text-4xl text-[#EE6983]" />
+            <FaUserShield className="text-4xl text-success" />
             <h3 className="text-xl font-bold">Premium Member</h3>
             <p className="text-gray-600">Exclusive benefits</p>
           </div>

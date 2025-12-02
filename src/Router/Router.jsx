@@ -1,6 +1,5 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router';
-import Root from '../Layouts/root';
 import Home from '../Pages/Home';
 import Registration from '../Pages/Register';
 import Login from '../Pages/Login';
@@ -12,6 +11,7 @@ import ErrorPage from '../Pages/ErrorPage';
 import ForgetPassword from '../Pages/ForgetPassword';
 import About from '../Pages/About';
 import Contact from '../Pages/ContactUs';
+import Root from '../Layouts/Root';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([

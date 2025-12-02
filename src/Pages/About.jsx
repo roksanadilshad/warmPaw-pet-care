@@ -10,7 +10,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto py-16">
+    <div className="w-11/12 mx-auto lg:py-16">
       {/* Top Section */}
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center shadow-xl rounded-3xl p-10 bg-secondary">
 
@@ -79,7 +79,7 @@ const About = () => {
       </div>
 
       {/* Values */}
-      <div className="mt-10 grid md:grid-cols-3 grid-cols-1 gap-8 text-center">
+      <div className="my-10 grid md:grid-cols-3 grid-cols-1 gap-8 text-center">
         <div className="bg-primary shadow-lg rounded-2xl p-6" data-aos="zoom-in">
           <h3 className="text-xl font-bold text-gray-700 mb-2">Compassion</h3>
           <p className="text-gray-500">We treat every pet with love, care, and respect.</p>

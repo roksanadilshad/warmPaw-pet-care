@@ -62,7 +62,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-primary lg:py-12 mt-12 rounded-xl p-6 text-gray-500 shadow-md">
+      <section className="bg-primary lg:py-12 mt-12 rounded-xl p-6 text-gray-700 shadow-md">
         <Title
           title="Why Choose WarmPaws?"
           description="We provide exceptional winter care services for your pets with love and professionalism."

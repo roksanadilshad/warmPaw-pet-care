@@ -13,8 +13,8 @@ const Header = () => {
     }
     const links = <>
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/service'>Service</NavLink></li>
-    <li><NavLink to='/about'>About</NavLink></li>
+    <li><NavLink to='/service'>Our Services</NavLink></li>
+    <li><NavLink to='/about'>About Us</NavLink></li>
     <li><NavLink to='/contactUs'>Contact Us</NavLink></li>
 
     {

@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
         {
           path:'/petDetails/:id' ,
           loader: () =>fetch('/pets.json'),
-          element: <PrivateRoute><PetDetails></PetDetails></PrivateRoute>
+          element: <PetDetails></PetDetails>
         },
         {
           path: '/forgetPassword',

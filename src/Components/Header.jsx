@@ -14,7 +14,14 @@ const Header = () => {
     const links = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/service'>Service</NavLink></li>
-    <li><NavLink to='/profile'>My Profile</NavLink></li>
+    <li><NavLink to='/about'>About</NavLink></li>
+    <li><NavLink to='/contactUs'>Contact Us</NavLink></li>
+
+    {
+      user && (
+        <li><NavLink to='/profile'>My Profile</NavLink></li>
+      )
+    }
   
     </>
     return (
@@ -28,7 +35,7 @@ const Header = () => {
           </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-secondary text-gray-500 rounded-box z-[50] mt-3 w-52 p-2 shadow">
        {links}
       </ul>
     </div>
@@ -37,7 +44,7 @@ const Header = () => {
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu text-gray-500 menu-horizontal px-1">
       {links}
     </ul>
   </div>

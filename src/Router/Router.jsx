@@ -10,6 +10,8 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import Profile from '../Pages/Profile';
 import ErrorPage from '../Pages/ErrorPage';
 import ForgetPassword from '../Pages/ForgetPassword';
+import About from '../Pages/About';
+import Contact from '../Pages/ContactUs';
 //import PetsCard from '../Pages/PetsCard';
 
 export const router = createBrowserRouter([
@@ -45,6 +47,14 @@ export const router = createBrowserRouter([
         {
           path:'/login' ,
          element:<Login></Login>
+        },
+        {
+          path:'/about' ,
+         element:<About></About>
+        },
+        {
+          path:'/contactUs' ,
+         element:<Contact></Contact>
         },
         {
           path:'/service' ,

@@ -53,7 +53,7 @@ const Home = () => {
           description="Helpful tips to keep your furry friends healthy, warm, and comfortable this winter."
         />
         <div className=" py-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 min-w-max">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 ">
             {tips.map((tipsCard) => (
               <TipsCards key={tipsCard.tipId} tipsCard={tipsCard} />
             ))}

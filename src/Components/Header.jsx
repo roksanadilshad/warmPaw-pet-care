@@ -1,6 +1,8 @@
 import React, { use } from 'react';
 import { Link, Navigate, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { FaPaw } from 'react-icons/fa';
+import Logo from './logo';
 
 const Header = () => {
     const {user, signOutUser} = use(AuthContext);
@@ -14,8 +16,8 @@ const Header = () => {
     const links = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/service'>Our Services</NavLink></li>
-    <li><NavLink to='/about'>About Us</NavLink></li>
-    <li><NavLink to='/contactUs'>Contact Us</NavLink></li>
+    <li><NavLink to='/about'>About us</NavLink></li>
+    <li><NavLink to='/contactUs'>Contact us</NavLink></li>
 
     {
       user && (
@@ -40,7 +42,8 @@ const Header = () => {
       </ul>
     </div>
     <Link to='/'>
-   <img src="https://templates.sparklethings.com/opet/wp-content/uploads/sites/133/2025/10/logo-opet.png" alt=""  className='w-20 h-12'/>
+<Logo></Logo>
+   
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">

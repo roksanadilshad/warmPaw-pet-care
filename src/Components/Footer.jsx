@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router";
-import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPaw } from "react-icons/fa";
+import Logo from "./logo";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-[#8D77AB] to-[#5E548E] text-white lg:pt-10 pb-6">
+    <footer className="relative bg-gradient-to-r from-[#8D77AB] to-[#5E548E] text-secondary lg:pt-10 pb-6">
       <div className="w-11/12 mx-auto ">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-0">
           {/* Logo and Description */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-            <img
-              src="https://templates.sparklethings.com/opet/wp-content/uploads/sites/133/2025/10/logo-opet.png"
-              alt="WarmPaws Logo"
-              className="w-28 h-auto"
-            />
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-5 gap-4">
+           <div className='font-bold flex justify-center items-center gap-1'>
+                       <span className="text-secondary ">WarmPaws</span>
+                                   <FaPaw className="text-4xl text-amber-400 " />
+                   </div>
+           
             <p className="text-gray-200 max-w-xs">
               WarmPaws - Keeping your pets warm, safe, and stylish with love.
             </p>

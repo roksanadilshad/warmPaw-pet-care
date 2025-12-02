@@ -55,7 +55,7 @@ const HeroSlider = () => {
                   {slide.subtitle}
                 </p>
                 <Link to='service' className="btn text-white btn-warning  font-semibold rounded-full shadow-lg hover:scale-105 transition">
-                  Explore Collection
+                  Explore Services
                 </Link>
               </div>
             </div>
@@ -66,7 +66,7 @@ const HeroSlider = () => {
   
 
         </div>
-    );
+    )
 };
 
 export default HeroSlider;

@@ -97,7 +97,7 @@
   },
   {
     "serviceId": 5,
-    "serviceName": "Winter Grooming & Fur Trimming",
+    "serviceName": "Winter Grooming & Trimming",
     "shortTitle": "Seasonal Grooming",
     "providerName": "SnowyPets Salon",
     "providerEmail": "bookings@snowypets.com",
@@ -445,7 +445,7 @@
 
   {
     "serviceId": 19,
-    "serviceName": "Emergency Warm Shelter Pickup",
+    "serviceName": "Emergency Shelter Pickup",
     "shortTitle": "Warm Rescue Pickup",
     "providerName": "PetRescue 24/7",
     "providerEmail": "rescue@pet247.com",

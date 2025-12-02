@@ -56,7 +56,7 @@ const PetDetails = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-secondary min-h-screen">
       {/* Hero Section */}
       <div className="relative h-96 w-full">
         <img
@@ -76,7 +76,7 @@ const PetDetails = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-0 mt-12 space-y-12">
+      <div className="w-11/12 mx-auto px-4 lg:px-0 mt-12 space-y-12">
 
         {/* About Service */}
         <section data-aos="fade-up">
@@ -88,7 +88,7 @@ const PetDetails = () => {
         </section>
 
         {/* Provider Info */}
-        <section data-aos="fade-left">
+        <section data-aos="fade-left" className="lg:w-[67%]">
           <h2 className="text-2xl font-semibold mb-4">Provider Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
             <p><FaUser className="inline mr-2" /> <strong>Name:</strong> {providerName}</p>
@@ -128,12 +128,12 @@ const PetDetails = () => {
         {/* Booking Form */}
         <section data-aos="fade-up">
           <h2 className="text-2xl font-semibold mb-4">Book This Service</h2>
-          <form onSubmit={handleOnSubmit} className="bg-white shadow-lg rounded-xl p-8 space-y-4">
+          <form onSubmit={handleOnSubmit} className="bg-primary shadow-lg rounded-xl p-8 space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-secondary"
                 value={formData.name}
                 required
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -141,7 +141,7 @@ const PetDetails = () => {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-secondary"
                 value={formData.email}
                 required
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -149,15 +149,15 @@ const PetDetails = () => {
             </div>
             <textarea
               placeholder="Additional Notes (Optional)"
-              className="textarea textarea-bordered w-full"
+              className="textarea textarea-bordered w-full bg-secondary"
               rows={3}
             ></textarea>
-            <button className="btn btn-success w-full mt-2">Book Now</button>
+            <button className="btn text-secondary btn-success w-full mt-2">Book Now</button>
           </form>
         </section>
 
         {/* FAQ / Tips */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" >
           <h2 className="text-2xl font-semibold mb-4">Winter Pet Care Tips</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Always keep your pet warm with coats or blankets.</li>
@@ -169,12 +169,12 @@ const PetDetails = () => {
         </section>
 
         {/* Related Services (Optional) */}
-        <section data-aos="fade-up">
+        <section data-aos="fade-up" className="mb-5 ">
           <h2 className="text-2xl font-semibold mb-4">Related Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {details.slice(0, 6).map((service) => (
               <Link key={service.serviceId} to={`/petDetails/${service.serviceId}`}>
-                <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+                <div className="bg-primary rounded-xl shadow hover:shadow-lg transition p-4">
                   <img src={service.image} alt={service.serviceName} className="rounded-lg h-40 w-full object-cover mb-2"/>
                   <h3 className="font-semibold text-lg">{service.serviceName}</h3>
                   <p className="text-gray-500">${service.price}</p>

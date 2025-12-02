@@ -30,11 +30,11 @@ serviceId
     <h2 className="text-xl font-semibold">{serviceName}</h2>
     <div className='py-2 flex justify-evenly items-center'>
             <p className='font-semibold '>{price}$</p>
-            <p className='font-semibold  flex items-center justify-center gap-1'>{rating}<IoStar className='text-amber-400 text-xl mb-1' /></p>
+            <p className='font-semibold  flex items-center justify-center gap-1'>{rating}<IoStar className='text-amber-400  text-xl mb-1' /></p>
     </div>
     <div className="card-actions justify-end">
         {
-            loading ? (<Loder></Loder>) : (<Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning w-full">View Details</button></Link>)
+            loading ? (<Loder></Loder>) : (<Link to={`/petDetails/${serviceId}`}><button className="btn btn-warning text-secondary w-full">View Details</button></Link>)
         }
         
      

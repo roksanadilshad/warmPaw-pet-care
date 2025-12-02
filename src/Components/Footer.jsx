@@ -4,7 +4,7 @@ const Footer = () => {
     return (
       <div className='animate__animated animate__bounceInUp'>
 
-        <footer  className="  footer footer-horizontal footer-center bg-[#B6771D] text-white rounded p-10">
+        <footer  className="  footer footer-horizontal footer-center bg-[#8D77AB] text-white rounded p-10">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">Contact info</a>
     <a className="link link-hover">Privacy policy</a>

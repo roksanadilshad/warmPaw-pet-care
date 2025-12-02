@@ -3,8 +3,8 @@ import { GridLoader } from 'react-spinners';
 
 const Loder = () => {
     return (
-        <div className='flex justify-center items-center h-screen'>
-            <GridLoader />
+        <div className='flex justify-center  items-center h-screen'>
+            <GridLoader className='text-primary' />
         </div>
     );
 };

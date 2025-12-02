@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="w-11/12 mx-auto py-16">
       {/* Top Section */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center bg-white shadow-xl rounded-3xl p-10 bg-gradient-to-br from-blue-50 to-pink-50">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center shadow-xl rounded-3xl p-10 bg-secondary">
 
         {/* Left Image */}
         <div data-aos="fade-right">
@@ -25,38 +25,38 @@ const About = () => {
 
         {/* Right Content */}
         <div data-aos="fade-left">
-          <h2 className="text-4xl font-bold text-[#850E35] mb-4">
+          <h2 className="text-4xl font-bold text-gray-700 mb-4">
             About WarmPaws
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            At <span className="font-semibold text-[#EE6983]">WarmPaws</span>, we are dedicated to
+          <p className="text-gray-500 leading-relaxed mb-4">
+            At <span className="font-semibold text-success">WarmPaws</span>, we are dedicated to
             keeping your furry companions safe, warm, and happy during the cold winter months.
             Our certified pet experts provide guidance, services, and seasonal care tips to help
             every pet stay comfortable all winter long.
           </p>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
-            We believe every pet deserves warmth, love, and proper winter care—whether it’s
+          <p className="text-gray-500 leading-relaxed mb-6">
+            We believe every pet deserves warmth, love, and proper winter care—whether it's
             paw protection, grooming, winter nutrition, or seasonal checkups.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 text-center gap-4 mt-6">
-            <div className="bg-white p-4 rounded-xl shadow">
-              <IoPaw className="text-3xl mx-auto text-[#EE6983]" />
+            <div className="bg-primary p-4 rounded-xl shadow">
+              <IoPaw className="text-3xl mx-auto text-success" />
               <h3 className="text-xl font-bold">1500+</h3>
-              <p className="text-gray-600 text-sm">Pets Helped</p>
+              <p className="text-gray-500 text-sm">Pets Helped</p>
             </div>
-            <div className="bg-white p-4 rounded-xl shadow">
-              <FaUserDoctor className="text-3xl mx-auto text-[#EE6983]" />
+            <div className="bg-primary p-4 rounded-xl shadow">
+              <FaUserDoctor className="text-3xl mx-auto text-success" />
               <h3 className="text-xl font-bold">25+</h3>
-              <p className="text-gray-600 text-sm">Expert Vets</p>
+              <p className="text-gray-500 text-sm">Expert Vets</p>
             </div>
-            <div className="bg-white p-4 rounded-xl shadow">
-              <IoSnow className="text-3xl mx-auto text-[#EE6983]" />
+            <div className="bg-primary p-4 rounded-xl shadow">
+              <IoSnow className="text-3xl mx-auto text-success" />
               <h3 className="text-xl font-bold">10+</h3>
-              <p className="text-gray-600 text-sm">Winter Services</p>
+              <p className="text-gray-500 text-sm">Winter Services</p>
             </div>
           </div>
         </div>
@@ -64,11 +64,11 @@ const About = () => {
 
       {/* Mission Section */}
       <div className="mt-20 text-center">
-        <h2 className="text-4xl font-bold text-[#850E35]" data-aos="fade-up">
+        <h2 className="text-4xl font-bold text-gray-700" data-aos="fade-up">
           Our Mission
         </h2>
         <p
-          className="mt-4 max-w-3xl mx-auto text-gray-700 leading-relaxed"
+          className="mt-4 max-w-3xl mx-auto text-gray-500 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -80,19 +80,19 @@ const About = () => {
 
       {/* Values */}
       <div className="mt-10 grid md:grid-cols-3 grid-cols-1 gap-8 text-center">
-        <div className="bg-white shadow-lg rounded-2xl p-6" data-aos="zoom-in">
-          <h3 className="text-xl font-bold text-[#850E35] mb-2">Compassion</h3>
-          <p className="text-gray-600">We treat every pet with love, care, and respect.</p>
+        <div className="bg-primary shadow-lg rounded-2xl p-6" data-aos="zoom-in">
+          <h3 className="text-xl font-bold text-gray-700 mb-2">Compassion</h3>
+          <p className="text-gray-500">We treat every pet with love, care, and respect.</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-2xl p-6" data-aos="zoom-in" data-aos-delay="100">
-          <h3 className="text-xl font-bold text-[#850E35] mb-2">Safety First</h3>
-          <p className="text-gray-600">All our winter services focus on pet well-being.</p>
+        <div className="bg-primary shadow-lg rounded-2xl p-6" data-aos="zoom-in" data-aos-delay="100">
+          <h3 className="text-xl font-bold text-gray-700 mb-2">Safety First</h3>
+          <p className="text-gray-500">All our winter services focus on pet well-being.</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-2xl p-6" data-aos="zoom-in" data-aos-delay="200">
-          <h3 className="text-xl font-bold text-[#850E35] mb-2">Expert Care</h3>
-          <p className="text-gray-600">Our vets ensure healthy, safe, and joyful winter living.</p>
+        <div className="bg-primary shadow-lg rounded-2xl p-6" data-aos="zoom-in" data-aos-delay="200">
+          <h3 className="text-xl font-bold text-gray-700 mb-2">Expert Care</h3>
+          <p className="text-gray-500">Our vets ensure healthy, safe, and joyful winter living.</p>
         </div>
       </div>
     </div>

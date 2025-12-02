@@ -31,15 +31,15 @@ const Home = () => {
           title="Popular Winter Care Services"
           description="As the chilly season approaches, keep your pets safe, warm, and happy with our top services."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {pets.slice(0, 8).map((service) => (
             <ServiceCard key={service.serviceId} service={service} />
           ))}
         </div>
-        <div className="text-center mt-6">
+        <div className="text-center mt-12">
           <Link
             to="/service"
-            className="btn btn-warning px-8 py-3 font-semibold rounded-full shadow-lg hover:scale-105 transition"
+            className="btn btn-warning text-secondary px-8 py-3 font-semibold rounded-full shadow-lg hover:scale-105 transition"
           >
             View All Services
           </Link>
@@ -101,12 +101,12 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-[#BAD8B6] text-white py-12 my-12 rounded-xl text-center  shadow-md">
+      <section className="bg-[#BAD8B6] text-secondary py-12 my-12 rounded-xl text-center  shadow-md">
         <h2 className="text-4xl font-bold mb-4">Book a Winter Care Service Now</h2>
         <p className="text-lg mb-6">Keep your furry friends warm and safe this winter with our expert services.</p>
         <Link
           to="/service"
-          className="btn btn-white text-gray-500 px-8 py-3 font-semibold rounded-full shadow-lg hover:scale-105 transition "
+          className="btn btn-warning text-secondary  px-8 py-3 font-semibold rounded-full shadow-lg hover:scale-105 transition "
         >
           Book Now
         </Link>

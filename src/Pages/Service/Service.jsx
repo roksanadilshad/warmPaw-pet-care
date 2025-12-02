@@ -79,7 +79,7 @@ const Service = () => {
               placeholder='Search services...'
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className='input input-bordered w-full mt-2 bg-secondary'
+              className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
             />
           </div>
 
@@ -92,7 +92,7 @@ const Service = () => {
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition 
-                    ${selectedCategory === cat ? 'bg-amber-500 text-white' : 'bg-[#BAD8B6] text-gray-700 hover:bg-amber-300'}`}
+                    ${selectedCategory === cat ? 'bg-success text-white' : 'bg-[#BAD8B6] text-gray-700 hover:bg-secondary'}`}
                 >
                   {cat}
                 </button>
@@ -109,7 +109,7 @@ const Service = () => {
                   key={option.value}
                   onClick={() => setSortOption(option.value)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition 
-                    ${sortOption === option.value ? 'bg-amber-500 text-white' : 'bg-[#BAD8B6] text-gray-700 hover:bg-amber-300'}`}
+                    ${sortOption === option.value ? 'bg-success text-white' : 'bg-[#BAD8B6] text-gray-700 hover:bg-secondary'}`}
                 >
                   {option.label}
                 </button>

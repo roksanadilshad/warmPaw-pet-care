@@ -92,9 +92,9 @@ const Registration = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-secondary px-4">
+    <div className="relative min-h-screen flex items-center justify-center bg-secondary p-4">
       {/* Glassmorphic Registration Card */}
-      <div className="relative w-full max-w-md bg-primary backdrop-blur-md rounded-3xl shadow-2xl p-10 z-10 border border-[#8D77AB]/30">
+      <div className="relative w-full max-w-lg bg-primary backdrop-blur-md rounded-2xl  shadow-2xl p-10 z-10 ">
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold text-gray-700 mb-2">Create Account</h1>
           <p className="text-gray-500">
@@ -109,7 +109,7 @@ const Registration = () => {
             <input
               name="name"
               type="text"
-              className="input input-bordered rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB] bg-white/70"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               placeholder="Enter your name"
               required
             />
@@ -122,7 +122,7 @@ const Registration = () => {
             <input
               name="photo"
               type="url"
-              className="input input-bordered rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB] bg-white/70"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               placeholder="Enter your photo URL"
               required
             />
@@ -134,7 +134,7 @@ const Registration = () => {
             <input
               name="email"
               type="email"
-              className="input input-bordered rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB] bg-white/70"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               placeholder="Enter your email"
               required
             />
@@ -146,14 +146,14 @@ const Registration = () => {
             <input
               name="password"
               type={showPass ? "text" : "password"}
-              className="input input-bordered rounded-xl pr-12 focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB] bg-white/70"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               placeholder="Enter your password"
               required
             />
             <button
               type="button"
               onClick={handlePasswordShow}
-              className="absolute right-13 top-12 transform -translate-y-1/2 text-gray-600 text-lg"
+              className="absolute right-3 top-14 transform -translate-y-1/2 text-gray-600 text-lg"
             >
               {showPass ? <FaEye /> : <LuEyeClosed />}
             </button>
@@ -169,7 +169,7 @@ const Registration = () => {
           {error && <p className="text-red-500 text-center">{error}</p>}
 
           {/* Register Button */}
-          <button className="btn w-full text-white bg-[#F4B342] border-[#F4B342] shadow-lg mt-2">
+          <button className="btn w-full text-secondary bg-warning border-warning shadow-lg mt-2">
             Register
           </button>
         </form>
@@ -180,7 +180,7 @@ const Registration = () => {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          className="btn w-full bg-white text-black border hover:bg-gray-100 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
+          className="btn w-full bg-info text-secondary border border-info hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
         >
           <FaGoogle /> Sign up with Google
         </button>

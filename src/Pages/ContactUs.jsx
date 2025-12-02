@@ -33,7 +33,7 @@ const Contact = () => {
                   type="text"
                   defaultValue={user?.displayName}
                   placeholder="Enter your full name"
-                  className="w-full bg-secondary mt-1 lg:p-3 p-1  rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
                 />
               </div>
 
@@ -43,7 +43,7 @@ const Contact = () => {
                   type="email"
                   defaultValue={user?.email}
                   placeholder="Enter your email"
-                  className="w-full bg-secondary mt-1 lg:p-3 p-1 rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
                 />
               </div>
 
@@ -52,11 +52,11 @@ const Contact = () => {
                 <textarea
                   rows="5"
                   placeholder="Write your message..."
-                  className="w-full bg-secondary mt-1 lg:p-3 p-1 rounded-xl outline-none focus:border-[#8D77AB]"
+                  className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
                 ></textarea>
               </div>
 
-              <button className="w-full lg:py-3 py-1rounded-xl bg-[#8D77AB] text-white text-lg font-semibold hover:bg-[#BAD8B6] transition-all">
+              <button className="w-full lg:py-3 py-1 rounded-xl bg-[#8D77AB] text-white text-lg font-semibold hover:bg-[#BAD8B6] transition-all">
                 Send Message
               </button>
             </form>

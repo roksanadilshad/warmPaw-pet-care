@@ -67,7 +67,7 @@ const Profile = () => {
                   type="text"
                   name="name"
                   defaultValue={user?.displayName || ""}
-                  className="input input-bordered rounded-xl focus:border-success outline-none"
+                  className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
                   required
                 />
               </div>
@@ -77,7 +77,7 @@ const Profile = () => {
                   type="url"
                   name="photoURL"
                   defaultValue={user?.photoURL || ""}
-                  className="input input-bordered rounded-xl focus:border-success outline-none"
+                  className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
                   required
                 />
               </div>

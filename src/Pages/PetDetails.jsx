@@ -133,7 +133,8 @@ const PetDetails = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="input input-bordered w-full bg-secondary"
+                             className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
+
                 value={formData.name}
                 required
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -141,7 +142,8 @@ const PetDetails = () => {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="input input-bordered w-full bg-secondary"
+                             className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
+
                 value={formData.email}
                 required
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -149,7 +151,7 @@ const PetDetails = () => {
             </div>
             <textarea
               placeholder="Additional Notes (Optional)"
-              className="textarea textarea-bordered w-full bg-secondary"
+                            className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
               rows={3}
             ></textarea>
             <button className="btn text-secondary btn-success w-full mt-2">Book Now</button>

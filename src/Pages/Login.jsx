@@ -78,7 +78,7 @@ const Login = () => {
               name="email"
               type="email"
               placeholder="Enter your email"
-              className="input input-bordered rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB]"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               required
             />
           </div>
@@ -89,13 +89,13 @@ const Login = () => {
               name="password"
               type={showPass ? "text" : "password"}
               placeholder="Enter your password"
-              className="input input-bordered rounded-xl pr-12 focus:outline-none focus:ring-2 focus:ring-[#8D77AB] focus:border-[#8D77AB]"
+              className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
               required
             />
             <button
               type="button"
               onClick={handlePasswordShow}
-              className="absolute right-19 top-12 transform -translate-y-1/2 text-gray-500 text-lg"
+              className="absolute right-3 top-14 transform -translate-y-1/2 text-gray-500 text-lg"
             >
               {showPass ? <FaEye /> : <LuEyeClosed />}
             </button>
@@ -104,7 +104,7 @@ const Login = () => {
           <div className="flex justify-between items-center">
             <button
               onClick={handleForgetPassword}
-              className="text-sm text-[#850E35] hover:underline"
+              className="text-sm text-warning hover:underline"
             >
               Forgot password?
             </button>
@@ -124,7 +124,7 @@ const Login = () => {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          className="btn w-full bg-white text-black border hover:bg-gray-100 flex items-center justify-center gap-2"
+          className="btn w-full bg-info text-secondary border border-info hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
         >
           <FaGoogle /> Login with Google
         </button>

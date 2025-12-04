@@ -116,7 +116,7 @@ const Login = () => {
             </p>
           )}
 
-          <button className="btn btn-success w-full text-white mt-2">Login</button>
+          <button className="btn btn-success w-full text-white mt-2 hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105">Login</button>
         </form>
 
         <div className="divider">OR</div>
@@ -124,7 +124,7 @@ const Login = () => {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          className="btn w-full bg-info text-secondary border border-info hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
+          className="btn w-full bg-success text-secondary border border-info hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
         >
           <FaGoogle /> Login with Google
         </button>

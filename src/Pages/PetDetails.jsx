@@ -126,37 +126,67 @@ const PetDetails = () => {
         </section>
 
         {/* Booking Form */}
-        <section data-aos="fade-up">
-          <h2 className="text-2xl font-semibold mb-4">Book This Service</h2>
-          <form onSubmit={handleOnSubmit} className="bg-primary shadow-lg rounded-xl p-8 space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                             className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
+       {/* Booking Form */}
+<section data-aos="fade-up">
+  <h2 className="text-2xl font-semibold mb-4">Book This Service</h2>
 
-                value={formData.name}
-                required
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                             className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
+  {/* If user is not logged in */}
+  {!user ? (
+    <div className="bg-primary p-8 rounded-xl text-center">
+      <p className="text-white text-lg mb-4">
+        You must be logged in to book this service.
+      </p>
+      <Link to="/login" className="btn btn-success text-secondary">
+        Login to Continue
+      </Link>
+    </div>
+  ) : user.email === providerEmail ? (
+    // If logged-in user is the provider
+    <div className="bg-primary p-8 rounded-xl text-center">
+      <p className="text-white text-lg mb-2">
+        You cannot book your own service.
+      </p>
+    </div>
+  ) : (
+    // If logged-in and not the provider → show form
+    <form
+      onSubmit={handleOnSubmit}
+      className="bg-primary shadow-lg rounded-xl p-8 space-y-4"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
+          value={formData.name}
+          required
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
+          value={formData.email}
+          required
+          onChange={(e) =>
+            setFormData({ ...formData, email: e.target.value })
+          }
+        />
+      </div>
 
-                value={formData.email}
-                required
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-            </div>
-            <textarea
-              placeholder="Additional Notes (Optional)"
-                            className='w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]'
-              rows={3}
-            ></textarea>
-            <button className="btn text-secondary btn-success w-full mt-2">Book Now</button>
-          </form>
-        </section>
+      <textarea
+        placeholder="Additional Notes (Optional)"
+        className="w-full bg-secondary mt-1 p-3 text-gray-400 rounded-xl outline-none focus:border-[#8D77AB]"
+        rows={3}
+      ></textarea>
+
+      <button className="btn text-secondary btn-success w-full mt-2">
+        Book Now
+      </button>
+    </form>
+  )}
+</section>
+
 
         {/* FAQ / Tips */}
         <section data-aos="fade-up" >

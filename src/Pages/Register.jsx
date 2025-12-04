@@ -169,7 +169,7 @@ const Registration = () => {
           {error && <p className="text-red-500 text-center">{error}</p>}
 
           {/* Register Button */}
-          <button className="btn w-full text-secondary bg-warning border-warning shadow-lg mt-2">
+          <button className="btn w-full text-secondary bg-warning mt-2 hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105">
             Register
           </button>
         </form>
@@ -180,7 +180,7 @@ const Registration = () => {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          className="btn w-full bg-info text-secondary border border-info hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
+          className="btn w-full bg-success text-secondary hover:bg-secondary hover:text-gray-700 flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-105"
         >
           <FaGoogle /> Sign up with Google
         </button>
